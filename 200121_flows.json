@@ -1512,10 +1512,11 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1460,
-        "y": 1140,
+        "y": 900,
         "wires": [
             [
-                "48697fb1.e31c3"
+                "48697fb1.e31c3",
+                "400b33ae.b2cc4c"
             ]
         ]
     },
@@ -2017,7 +2018,8 @@
         "y": 1260,
         "wires": [
             [
-                "984c0ad.ba56bf8"
+                "984c0ad.ba56bf8",
+                "b7fe10e8.3ec69"
             ]
         ]
     },
@@ -2129,10 +2131,11 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1490,
-        "y": 900,
+        "y": 1020,
         "wires": [
             [
-                "d1e8caad.5d21f8"
+                "d1e8caad.5d21f8",
+                "f4ad183f.a6843"
             ]
         ]
     },
@@ -2157,10 +2160,11 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1490,
-        "y": 1020,
+        "y": 1140,
         "wires": [
             [
-                "f4dab476.8c8c98"
+                "f4dab476.8c8c98",
+                "fd8c89b4.6f8428"
             ]
         ]
     },
@@ -2401,7 +2405,7 @@
         "id": "aa3e304b.7cd238",
         "type": "blind-control",
         "z": "db6aac1c.cd43b",
-        "name": "WZ + Büro + Gast WC",
+        "name": "Büro + Gäste WC",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
         "outputs": 1,
@@ -2613,13 +2617,11 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1110,
-        "y": 1000,
+        "x": 1100,
+        "y": 840,
         "wires": [
             [
                 "3a0e77ba.7b53f8",
-                "5be3d0b2.aec738",
-                "a895192a.6defd",
                 "dd7ce24d.ab706"
             ]
         ]
@@ -2940,6 +2942,7 @@
         "id": "9c307437.fce21",
         "type": "blind-control",
         "z": "db6aac1c.cd43b",
+        "d": true,
         "name": "Sonnenschutz West",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
@@ -6331,7 +6334,7 @@
         "property": "payload",
         "peaktime": 3000,
         "x": 1760,
-        "y": 1140,
+        "y": 900,
         "wires": []
     },
     {
@@ -6373,7 +6376,7 @@
         "property": "payload",
         "peaktime": 3000,
         "x": 1760,
-        "y": 1020,
+        "y": 1140,
         "wires": []
     },
     {
@@ -6415,7 +6418,7 @@
         "property": "payload",
         "peaktime": 3000,
         "x": 1760,
-        "y": 900,
+        "y": 1020,
         "wires": []
     },
     {
@@ -7014,14 +7017,16 @@
         "order": 2,
         "width": 1,
         "height": 4,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
+        "className": "",
         "x": 1770,
-        "y": 1200,
+        "y": 960,
         "wires": [
             [
                 "dd7ce24d.ab706"
@@ -7039,14 +7044,16 @@
         "order": 4,
         "width": 1,
         "height": 4,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
+        "className": "",
         "x": 1760,
-        "y": 1080,
+        "y": 1200,
         "wires": [
             [
                 "a895192a.6defd"
@@ -7064,14 +7071,16 @@
         "order": 2,
         "width": 1,
         "height": 4,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
+        "className": "",
         "x": 1760,
-        "y": 960,
+        "y": 1080,
         "wires": [
             [
                 "5be3d0b2.aec738"
@@ -7089,12 +7098,14 @@
         "order": 4,
         "width": 1,
         "height": 4,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
+        "className": "",
         "x": 1760,
         "y": 1320,
         "wires": [
@@ -13422,7 +13433,8 @@
                 "43ea72a5.8ffe2c",
                 "b28eb63.21d6f48",
                 "7bbfbfd.19fd2c",
-                "bdef110.bc8d57"
+                "bdef110.bc8d57",
+                "e2b04b87.872ac8"
             ]
         ]
     },
@@ -23747,6 +23759,231 @@
         "wires": [
             [
                 "f3cbf3e.05d371"
+            ]
+        ]
+    },
+    {
+        "id": "e2b04b87.872ac8",
+        "type": "blind-control",
+        "z": "db6aac1c.cd43b",
+        "name": "WZ West",
+        "topic": "",
+        "positionConfig": "6ad7a531.04aedc",
+        "outputs": 1,
+        "autoTrigger": false,
+        "autoTriggerTime": 3600000,
+        "startDelayTime": "0",
+        "storeName": "",
+        "blindIncrement": "0.1",
+        "blindOpenPos": "1",
+        "blindClosedPos": 0,
+        "blindPosReverse": false,
+        "blindPosDefault": "open (max)",
+        "blindPosDefaultType": "levelFixed",
+        "overwriteExpire": "",
+        "rules": [
+            {
+                "index": 0,
+                "name": "Sonnenaufgang",
+                "isValid": false,
+                "valid": {},
+                "timeValue": "blueHourDawnEnd",
+                "timeType": "pdsTime",
+                "timeOp": 0,
+                "timeOpText": "↥ until",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 60000,
+                "timeDays": "*",
+                "timeMonths": "*",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "",
+                "timeDateEnd": "",
+                "timeMinValue": "openBlindBusinessDay_String",
+                "timeMinType": "flow",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "",
+                "timeMaxType": "none",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "levelValue": "closed (min)",
+                "levelType": "levelFixed",
+                "levelOp": 0,
+                "levelOpText": "↕ absolute",
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "is true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
+            },
+            {
+                "index": 1,
+                "name": "Sonnenaufgang_WE",
+                "isValid": false,
+                "valid": {},
+                "timeValue": "blueHourDawnEnd",
+                "timeType": "pdsTime",
+                "timeOp": 0,
+                "timeOpText": "↥ until",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 60000,
+                "timeDays": "*",
+                "timeMonths": "*",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "",
+                "timeDateEnd": "",
+                "timeMinValue": "openBlindWeekendOrHoliday_String",
+                "timeMinType": "flow",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "",
+                "timeMaxType": "none",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "levelValue": "closed (min)",
+                "levelType": "levelFixed",
+                "levelOp": 0,
+                "levelOpText": "↕ absolute",
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "true",
+                "validOperatorText": "is true",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "is true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
+            },
+            {
+                "index": 2,
+                "name": "Sonnenuntergang",
+                "isValid": false,
+                "valid": {},
+                "timeValue": "blueHourDuskStart",
+                "timeType": "pdsTime",
+                "timeOp": 1,
+                "timeOpText": "↧ von",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 3600000,
+                "timeDays": "*",
+                "timeMonths": "*",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "",
+                "timeDateEnd": "",
+                "timeMinValue": "",
+                "timeMinType": "none",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "",
+                "timeMaxType": "none",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "levelValue": "closed (min)",
+                "levelType": "levelFixed",
+                "levelOp": 0,
+                "levelOpText": "↕  Absolut",
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "",
+                "validOperandAType": "none",
+                "validOperator": "true",
+                "validOperatorText": "ist true",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "ist true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
+            }
+        ],
+        "sunControlMode": "2",
+        "sunFloorLength": "0",
+        "sunMinAltitude": "10",
+        "sunMinDelta": "0.1",
+        "blindPosMin": "10%",
+        "blindPosMinType": "levelFixed",
+        "blindPosMax": "75%",
+        "blindPosMaxType": "levelFixed",
+        "smoothTime": "1800000",
+        "sunTopic": "",
+        "windowTop": "220",
+        "windowBottom": "0",
+        "windowAzimuthStart": "200",
+        "windowAzimuthEnd": "280",
+        "oversteerValue": "payload.temp_maxc",
+        "oversteerValueType": "msg",
+        "oversteerCompare": "lt",
+        "oversteerThreshold": "thresholdMaxTempEnvValue",
+        "oversteerThresholdType": "global",
+        "oversteerBlindPos": "open (max)",
+        "oversteerBlindPosType": "levelFixed",
+        "oversteer2Value": "maxLightValue",
+        "oversteer2ValueType": "global",
+        "oversteer2Compare": "lt",
+        "oversteer2Threshold": "thresholdMaxLightValueGF",
+        "oversteer2ThresholdType": "global",
+        "oversteer2BlindPos": "open (max)",
+        "oversteer2BlindPosType": "levelFixed",
+        "oversteer3Value": "",
+        "oversteer3ValueType": "none",
+        "oversteer3Compare": "gte",
+        "oversteer3Threshold": "",
+        "oversteer3ThresholdType": "num",
+        "oversteer3BlindPos": "open (max)",
+        "oversteer3BlindPosType": "levelFixed",
+        "oversteerTopic": "",
+        "x": 1080,
+        "y": 1060,
+        "wires": [
+            [
+                "5be3d0b2.aec738",
+                "a895192a.6defd"
             ]
         ]
     }
