@@ -1145,7 +1145,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 870,
+        "x": 1090,
         "y": 220,
         "wires": [
             [
@@ -1174,8 +1174,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1410,
-        "y": 820,
+        "x": 1450,
+        "y": 780,
         "wires": [
             [
                 "17fc17ca.4d5ec8",
@@ -1237,10 +1237,7 @@
         "wires": [
             [
                 "774276f5.5534c8",
-                "1a4ada5c.6797fe",
                 "437a6603.5d12d8",
-                "6e8acc25.5a0374",
-                "7e9b5c04.176d9c",
                 "aa3e304b.7cd238",
                 "99680790.f362b",
                 "c66f90e1.abd6f",
@@ -1277,6 +1274,7 @@
         "id": "46f9c2e1.dfa20c",
         "type": "blind-control",
         "z": "db6aac1c.cd43b",
+        "d": true,
         "name": "Sonnenschutz Süd",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
@@ -1513,8 +1511,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1420,
-        "y": 1180,
+        "x": 1460,
+        "y": 1140,
         "wires": [
             [
                 "48697fb1.e31c3"
@@ -1798,7 +1796,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 860,
+        "x": 1080,
         "y": 560,
         "wires": [
             [
@@ -1827,7 +1825,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1430,
+        "x": 1650,
         "y": 83,
         "wires": [
             [
@@ -1855,7 +1853,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1440,
+        "x": 1660,
         "y": 197,
         "wires": [
             [
@@ -1883,7 +1881,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1428,
+        "x": 1648,
         "y": 254,
         "wires": [
             [
@@ -1911,7 +1909,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1430,
+        "x": 1650,
         "y": 137,
         "wires": [
             [
@@ -1939,7 +1937,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1434,
+        "x": 1654,
         "y": 313,
         "wires": [
             [
@@ -1967,7 +1965,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1414,
+        "x": 1634,
         "y": 478,
         "wires": [
             [
@@ -1981,7 +1979,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollos OG",
         "info": "",
-        "x": 1400,
+        "x": 1620,
         "y": 40,
         "wires": []
     },
@@ -1991,8 +1989,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollos EG",
         "info": "",
-        "x": 1400,
-        "y": 760,
+        "x": 1440,
+        "y": 720,
         "wires": []
     },
     {
@@ -2015,8 +2013,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1430,
-        "y": 1340,
+        "x": 1470,
+        "y": 1260,
         "wires": [
             [
                 "984c0ad.ba56bf8"
@@ -2043,11 +2041,12 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1750,
-        "y": 1560,
+        "x": 1970,
+        "y": 1580,
         "wires": [
             [
-                "c1df97fd.0234b8"
+                "c1df97fd.0234b8",
+                "e39ac8a6.22933"
             ]
         ]
     },
@@ -2071,12 +2070,12 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1760,
+        "x": 1980,
         "y": 1480,
         "wires": [
             [
                 "44841334.14955c",
-                "fc249e55.e5099"
+                "880d6986.15d298"
             ]
         ]
     },
@@ -2100,11 +2099,12 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1760,
-        "y": 1640,
+        "x": 1980,
+        "y": 1680,
         "wires": [
             [
-                "98f5847.ce9a478"
+                "98f5847.ce9a478",
+                "c13498f.6c29e68"
             ]
         ]
     },
@@ -2128,8 +2128,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1450,
-        "y": 940,
+        "x": 1490,
+        "y": 900,
         "wires": [
             [
                 "d1e8caad.5d21f8"
@@ -2156,8 +2156,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1450,
-        "y": 1060,
+        "x": 1490,
+        "y": 1020,
         "wires": [
             [
                 "f4dab476.8c8c98"
@@ -2178,7 +2178,7 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 880,
+        "x": 1440,
         "y": 1480,
         "wires": [
             [
@@ -2344,8 +2344,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 880,
-        "y": 1560,
+        "x": 1440,
+        "y": 1580,
         "wires": [
             [
                 "22960c4b.4d7734"
@@ -2366,8 +2366,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 890,
-        "y": 1640,
+        "x": 1450,
+        "y": 1680,
         "wires": [
             [
                 "712cb21d.7c4eb4"
@@ -2389,11 +2389,11 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1180,
+        "x": 1740,
         "y": 1480,
         "wires": [
             [
-                "bdef110.bc8d57"
+                "f61e5d4c.7f8798"
             ]
         ]
     },
@@ -2613,7 +2613,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1070,
+        "x": 1110,
         "y": 1000,
         "wires": [
             [
@@ -2630,7 +2630,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Fensterkontaktschalter EG Süd",
         "info": "",
-        "x": 910,
+        "x": 1130,
         "y": 1420,
         "wires": []
     },
@@ -3435,7 +3435,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 870,
+        "x": 1090,
         "y": 340,
         "wires": [
             [
@@ -3688,7 +3688,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1434,
+        "x": 1654,
         "y": 369,
         "wires": [
             [
@@ -3716,7 +3716,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1414,
+        "x": 1634,
         "y": 426,
         "wires": [
             [
@@ -3744,7 +3744,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1430,
+        "x": 1650,
         "y": 537,
         "wires": [
             [
@@ -3772,7 +3772,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1440,
+        "x": 1660,
         "y": 597,
         "wires": [
             [
@@ -5418,7 +5418,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 870,
+        "x": 1090,
         "y": 140,
         "wires": [
             [
@@ -5642,7 +5642,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 860,
+        "x": 1080,
         "y": 80,
         "wires": [
             [
@@ -6204,8 +6204,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1990,
-        "y": 1640,
+        "x": 2230,
+        "y": 1680,
         "wires": []
     },
     {
@@ -6246,8 +6246,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1980,
-        "y": 1560,
+        "x": 2220,
+        "y": 1580,
         "wires": []
     },
     {
@@ -6288,7 +6288,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 2000,
+        "x": 2220,
         "y": 1480,
         "wires": []
     },
@@ -6330,8 +6330,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1720,
-        "y": 1200,
+        "x": 1760,
+        "y": 1140,
         "wires": []
     },
     {
@@ -6372,8 +6372,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1720,
-        "y": 1080,
+        "x": 1760,
+        "y": 1020,
         "wires": []
     },
     {
@@ -6414,8 +6414,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1720,
-        "y": 960,
+        "x": 1760,
+        "y": 900,
         "wires": []
     },
     {
@@ -6456,8 +6456,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1720,
-        "y": 1360,
+        "x": 1760,
+        "y": 1260,
         "wires": []
     },
     {
@@ -6498,8 +6498,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1710,
-        "y": 840,
+        "x": 1750,
+        "y": 780,
         "wires": []
     },
     {
@@ -6540,7 +6540,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1710,
+        "x": 1930,
         "y": 537,
         "wires": []
     },
@@ -6582,7 +6582,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1710,
+        "x": 1930,
         "y": 597,
         "wires": []
     },
@@ -6624,7 +6624,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1720,
+        "x": 1940,
         "y": 426,
         "wires": []
     },
@@ -6666,7 +6666,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1710,
+        "x": 1930,
         "y": 477,
         "wires": []
     },
@@ -6708,7 +6708,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1720,
+        "x": 1940,
         "y": 369,
         "wires": []
     },
@@ -6750,7 +6750,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1720,
+        "x": 1940,
         "y": 313,
         "wires": []
     },
@@ -6792,7 +6792,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1728,
+        "x": 1948,
         "y": 254,
         "wires": []
     },
@@ -6834,7 +6834,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1730,
+        "x": 1950,
         "y": 197,
         "wires": []
     },
@@ -6876,7 +6876,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1710,
+        "x": 1930,
         "y": 137,
         "wires": []
     },
@@ -6918,25 +6918,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1710,
+        "x": 1930,
         "y": 83,
-        "wires": []
-    },
-    {
-        "id": "fc249e55.e5099",
-        "type": "debug",
-        "z": "db6aac1c.cd43b",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1950,
-        "y": 1700,
         "wires": []
     },
     {
@@ -6950,14 +6933,16 @@
         "order": 9,
         "width": 1,
         "height": 4,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1570,
-        "y": 1520,
+        "className": "",
+        "x": 2220,
+        "y": 1540,
         "wires": [
             [
                 "f61e5d4c.7f8798"
@@ -6975,14 +6960,16 @@
         "order": 2,
         "width": 1,
         "height": 4,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1560,
-        "y": 1600,
+        "className": "",
+        "x": 2220,
+        "y": 1640,
         "wires": [
             [
                 "2007708a.75a3c"
@@ -7000,14 +6987,16 @@
         "order": 7,
         "width": 1,
         "height": 4,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1570,
-        "y": 1680,
+        "className": "",
+        "x": 2230,
+        "y": 1740,
         "wires": [
             [
                 "2bb83640.8872aa"
@@ -7031,8 +7020,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1730,
-        "y": 1140,
+        "x": 1770,
+        "y": 1200,
         "wires": [
             [
                 "dd7ce24d.ab706"
@@ -7056,8 +7045,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1720,
-        "y": 1020,
+        "x": 1760,
+        "y": 1080,
         "wires": [
             [
                 "a895192a.6defd"
@@ -7081,8 +7070,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1720,
-        "y": 900,
+        "x": 1760,
+        "y": 960,
         "wires": [
             [
                 "5be3d0b2.aec738"
@@ -7106,8 +7095,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1720,
-        "y": 1300,
+        "x": 1760,
+        "y": 1320,
         "wires": [
             [
                 "fe2c0d6.cf09ff"
@@ -7133,8 +7122,8 @@
         "max": "1",
         "step": "0.1",
         "className": "",
-        "x": 1710,
-        "y": 780,
+        "x": 1750,
+        "y": 840,
         "wires": [
             [
                 "3a0e77ba.7b53f8"
@@ -7158,7 +7147,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1190,
+        "x": 1410,
         "y": 517,
         "wires": [
             [
@@ -7183,7 +7172,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1190,
+        "x": 1410,
         "y": 577,
         "wires": [
             [
@@ -7208,7 +7197,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1194,
+        "x": 1414,
         "y": 466,
         "wires": [
             [
@@ -7233,7 +7222,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1194,
+        "x": 1414,
         "y": 406,
         "wires": [
             [
@@ -7260,7 +7249,7 @@
         "max": "1",
         "step": "0.1",
         "className": "",
-        "x": 1194,
+        "x": 1414,
         "y": 293,
         "wires": [
             [
@@ -7287,7 +7276,7 @@
         "max": "1",
         "step": "0.1",
         "className": "",
-        "x": 1194,
+        "x": 1414,
         "y": 349,
         "wires": [
             [
@@ -7312,7 +7301,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1210,
+        "x": 1430,
         "y": 177,
         "wires": [
             [
@@ -7337,7 +7326,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1208,
+        "x": 1428,
         "y": 234,
         "wires": [
             [
@@ -7362,7 +7351,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1190,
+        "x": 1410,
         "y": 60,
         "wires": [
             [
@@ -7387,7 +7376,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1190,
+        "x": 1410,
         "y": 117,
         "wires": [
             [
@@ -10780,11 +10769,11 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1180,
-        "y": 1560,
+        "x": 1740,
+        "y": 1580,
         "wires": [
             [
-                "8e36e051.5ac33"
+                "2007708a.75a3c"
             ]
         ]
     },
@@ -10803,11 +10792,11 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1180,
-        "y": 1640,
+        "x": 1740,
+        "y": 1680,
         "wires": [
             [
-                "7bbfbfd.19fd2c"
+                "2bb83640.8872aa"
             ]
         ]
     },
@@ -10815,7 +10804,7 @@
         "id": "bdef110.bc8d57",
         "type": "blind-control",
         "z": "db6aac1c.cd43b",
-        "name": "Tag/Nach-Steuerung 100% zu",
+        "name": "WZ Schiebe",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
         "outputs": 1,
@@ -11133,235 +11122,11 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1460,
+        "x": 1080,
         "y": 1480,
         "wires": [
             [
-                "f61e5d4c.7f8798"
-            ]
-        ]
-    },
-    {
-        "id": "8e36e051.5ac33",
-        "type": "blind-control",
-        "z": "db6aac1c.cd43b",
-        "name": "Tag/Nach-Steuerung 100% zu",
-        "topic": "",
-        "positionConfig": "6ad7a531.04aedc",
-        "outputs": 1,
-        "autoTrigger": false,
-        "autoTriggerTime": 3600000,
-        "startDelayTime": "0",
-        "storeName": "",
-        "blindIncrement": "0.1",
-        "blindOpenPos": "1",
-        "blindClosedPos": 0,
-        "blindPosReverse": false,
-        "blindPosDefault": "open (max)",
-        "blindPosDefaultType": "levelFixed",
-        "overwriteExpire": "",
-        "rules": [
-            {
-                "index": 0,
-                "name": "Sonnenaufgang",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "blueHourDawnEnd",
-                "timeType": "pdsTime",
-                "timeOp": 0,
-                "timeOpText": "↥ until",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "openBlindBusinessDay_String",
-                "timeMinType": "flow",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕ absolute",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
-                "validOperandAType": "global",
-                "validOperator": "false",
-                "validOperatorText": "is false",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "is true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 1,
-                "name": "Sonnenaufgang_WE",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "blueHourDawnEnd",
-                "timeType": "pdsTime",
-                "timeOp": 0,
-                "timeOpText": "↥ until",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "openBlindWeekendOrHoliday_String",
-                "timeMinType": "flow",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕ absolute",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
-                "validOperandAType": "global",
-                "validOperator": "true",
-                "validOperatorText": "is true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "is true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 2,
-                "name": "Sonnenuntergang",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "blueHourDuskStart",
-                "timeType": "pdsTime",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 3600000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            }
-        ],
-        "sunControlMode": "0",
-        "sunFloorLength": "",
-        "sunMinAltitude": "",
-        "sunMinDelta": "",
-        "blindPosMin": "closed (min)",
-        "blindPosMinType": "levelFixed",
-        "blindPosMax": "open (max)",
-        "blindPosMaxType": "levelFixed",
-        "smoothTime": "",
-        "sunTopic": "",
-        "windowTop": "",
-        "windowBottom": "",
-        "windowAzimuthStart": "0",
-        "windowAzimuthEnd": "",
-        "oversteerValue": "",
-        "oversteerValueType": "none",
-        "oversteerCompare": "gte",
-        "oversteerThreshold": "",
-        "oversteerThresholdType": "num",
-        "oversteerBlindPos": "open (max)",
-        "oversteerBlindPosType": "levelFixed",
-        "oversteer2Value": "",
-        "oversteer2ValueType": "none",
-        "oversteer2Compare": "gte",
-        "oversteer2Threshold": "",
-        "oversteer2ThresholdType": "num",
-        "oversteer2BlindPos": "open (max)",
-        "oversteer2BlindPosType": "levelFixed",
-        "oversteer3Value": "",
-        "oversteer3ValueType": "none",
-        "oversteer3Compare": "gte",
-        "oversteer3Threshold": "",
-        "oversteer3ThresholdType": "num",
-        "oversteer3BlindPos": "open (max)",
-        "oversteer3BlindPosType": "levelFixed",
-        "oversteerTopic": "",
-        "x": 1460,
-        "y": 1560,
-        "wires": [
-            [
-                "2007708a.75a3c"
+                "1a4ada5c.6797fe"
             ]
         ]
     },
@@ -11369,7 +11134,7 @@
         "id": "7bbfbfd.19fd2c",
         "type": "blind-control",
         "z": "db6aac1c.cd43b",
-        "name": "Tag/Nach-Steuerung 100% zu",
+        "name": "WZ Süd",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
         "outputs": 1,
@@ -11545,32 +11310,32 @@
                 "timeMaxOp": 0
             }
         ],
-        "sunControlMode": "0",
-        "sunFloorLength": "",
-        "sunMinAltitude": "",
-        "sunMinDelta": "",
-        "blindPosMin": "closed (min)",
+        "sunControlMode": "2",
+        "sunFloorLength": "0",
+        "sunMinAltitude": "20",
+        "sunMinDelta": "0.1",
+        "blindPosMin": "10%",
         "blindPosMinType": "levelFixed",
-        "blindPosMax": "open (max)",
+        "blindPosMax": "75%",
         "blindPosMaxType": "levelFixed",
-        "smoothTime": "",
+        "smoothTime": "1800000",
         "sunTopic": "",
-        "windowTop": "",
-        "windowBottom": "",
-        "windowAzimuthStart": "0",
-        "windowAzimuthEnd": "",
-        "oversteerValue": "",
-        "oversteerValueType": "none",
-        "oversteerCompare": "gte",
-        "oversteerThreshold": "",
-        "oversteerThresholdType": "num",
+        "windowTop": "220",
+        "windowBottom": "0",
+        "windowAzimuthStart": "110",
+        "windowAzimuthEnd": "250",
+        "oversteerValue": "payload.temp_maxc",
+        "oversteerValueType": "msg",
+        "oversteerCompare": "lt",
+        "oversteerThreshold": "thresholdMaxTempEnvValue",
+        "oversteerThresholdType": "global",
         "oversteerBlindPos": "open (max)",
         "oversteerBlindPosType": "levelFixed",
-        "oversteer2Value": "",
-        "oversteer2ValueType": "none",
-        "oversteer2Compare": "gte",
-        "oversteer2Threshold": "",
-        "oversteer2ThresholdType": "num",
+        "oversteer2Value": "maxLightValue",
+        "oversteer2ValueType": "global",
+        "oversteer2Compare": "lt",
+        "oversteer2Threshold": "thresholdMaxLightValueGF",
+        "oversteer2ThresholdType": "global",
         "oversteer2BlindPos": "open (max)",
         "oversteer2BlindPosType": "levelFixed",
         "oversteer3Value": "",
@@ -11581,11 +11346,12 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1460,
-        "y": 1640,
+        "x": 1070,
+        "y": 1620,
         "wires": [
             [
-                "2bb83640.8872aa"
+                "7e9b5c04.176d9c",
+                "6e8acc25.5a0374"
             ]
         ]
     },
@@ -13629,8 +13395,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1060,
-        "y": 1340,
+        "x": 1090,
+        "y": 1260,
         "wires": [
             [
                 "fe2c0d6.cf09ff"
@@ -13648,13 +13414,15 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 490,
-        "y": 460,
+        "x": 730,
+        "y": 300,
         "wires": [
             [
                 "cfb96521.b7a758",
                 "43ea72a5.8ffe2c",
-                "b28eb63.21d6f48"
+                "b28eb63.21d6f48",
+                "7bbfbfd.19fd2c",
+                "bdef110.bc8d57"
             ]
         ]
     },
@@ -23539,45 +23307,6 @@
         "wires": []
     },
     {
-        "id": "aa808e6e.7753d",
-        "type": "delay",
-        "z": "db6aac1c.cd43b",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "hour",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 1690,
-        "y": 720,
-        "wires": [
-            [
-                "a40f79b6.e0ea78"
-            ]
-        ]
-    },
-    {
-        "id": "a40f79b6.e0ea78",
-        "type": "rbe",
-        "z": "db6aac1c.cd43b",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 1850,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "43ea72a5.8ffe2c",
         "type": "blind-control",
         "z": "db6aac1c.cd43b",
@@ -23793,7 +23522,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 870,
+        "x": 1090,
         "y": 420,
         "wires": [
             [
