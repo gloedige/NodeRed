@@ -13645,7 +13645,7 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "PVPOWER",
-        "func": "var payload = msg.payload.power;\nif(payload>0)\n    global.set(\"PVPOWER\",payload)\nreturn msg;",
+        "func": "var payload = msg.payload.power;\nif(payload>0)\n    global.set(\"PVPOWER\",payload)\nelse\n    global.set(\"PVPOWER\", 0)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14138,7 +14138,7 @@
         "type": "ui_text",
         "z": "4e67676c.de2018",
         "group": "ca79f64c.8975d8",
-        "order": 1,
+        "order": 2,
         "width": "0",
         "height": "0",
         "name": "PV Leistung",
@@ -14457,7 +14457,7 @@
         "initialize": "",
         "finalize": "",
         "x": 540,
-        "y": 430,
+        "y": 520,
         "wires": [
             []
         ]
@@ -14483,7 +14483,7 @@
         "step": "100",
         "className": "",
         "x": 120,
-        "y": 430,
+        "y": 520,
         "wires": [
             [
                 "bc52b66f.0e5818"
@@ -14495,24 +14495,20 @@
         "type": "inject",
         "z": "4e67676c.de2018",
         "name": "all 1 min",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
+        "props": [],
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
+        "payloadType": "str",
         "x": 100,
         "y": 260,
         "wires": [
             [
                 "65965811.9a8258",
-                "9ed1bbe5.deaca8"
+                "9ed1bbe5.deaca8",
+                "4eec474f.a3f598"
             ]
         ]
     },
@@ -14543,7 +14539,7 @@
         "initialize": "",
         "finalize": "",
         "x": 580,
-        "y": 490,
+        "y": 580,
         "wires": [
             []
         ]
@@ -14567,7 +14563,7 @@
         "max": "2000",
         "step": "250",
         "x": 150,
-        "y": 490,
+        "y": 580,
         "wires": [
             [
                 "2909b7eb.3c8c28"
@@ -14585,7 +14581,7 @@
         "initialize": "",
         "finalize": "",
         "x": 580,
-        "y": 560,
+        "y": 650,
         "wires": [
             []
         ]
@@ -14609,7 +14605,7 @@
         "max": "1000",
         "step": "100",
         "x": 150,
-        "y": 560,
+        "y": 650,
         "wires": [
             [
                 "438a69df.3b4648"
@@ -24316,7 +24312,7 @@
         "id": "6d0a0212.82d57c",
         "type": "ccu-value",
         "z": "4e67676c.de2018",
-        "name": "Power Consumption",
+        "name": "Leistung Zähler",
         "iface": "HmIP-RF",
         "channel": "003FA0C9AD7613:1 Zähler IEC - Power",
         "datapoint": "POWER",
@@ -24332,13 +24328,13 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 480,
-        "y": 2760,
+        "x": 300,
+        "y": 2840,
         "wires": [
             [
                 "8b1a7f0c.5a068",
-                "eca7e759.e39f38",
-                "eac503ff.dda2f"
+                "eac503ff.dda2f",
+                "54d96d17.bd1214"
             ]
         ]
     },
@@ -24348,7 +24344,7 @@
         "z": "4e67676c.de2018",
         "name": "Leistung Zähler Plot [W]",
         "group": "ca79f64c.8975d8",
-        "order": 3,
+        "order": 4,
         "width": "6",
         "height": "4",
         "label": "Leistung Zähler Plot [W]",
@@ -24380,35 +24376,18 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 790,
-        "y": 2760,
+        "x": 630,
+        "y": 2840,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "eca7e759.e39f38",
-        "type": "debug",
-        "z": "4e67676c.de2018",
-        "name": "Verbrauch",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 2680,
-        "wires": []
     },
     {
         "id": "eac503ff.dda2f",
         "type": "ui_text",
         "z": "4e67676c.de2018",
         "group": "ca79f64c.8975d8",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "Leistung Zähler [W]",
@@ -24420,8 +24399,81 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 770,
-        "y": 2820,
+        "x": 610,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "54d96d17.bd1214",
+        "type": "function",
+        "z": "4e67676c.de2018",
+        "name": "Leistung Zähler",
+        "func": "var payload = msg.payload;\nif(payload>0)\n    global.set(\"LeistungZaehler\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 600,
+        "y": 2780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4eec474f.a3f598",
+        "type": "function",
+        "z": "4e67676c.de2018",
+        "name": "stromLast",
+        "func": "let pv_leistung = global.get(\"PVPOWER\");\nlet einspeise_leistung = global.get(\"LeistungZaehler\");\nvar payload = pv_leistung+einspeise_leistung;\nflow.set(\"stromLast\",payload)\nmsg.payload = payload\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 380,
+        "wires": [
+            [
+                "10806c1b.ebdf64",
+                "7d0ed1ae.82473"
+            ]
+        ]
+    },
+    {
+        "id": "10806c1b.ebdf64",
+        "type": "ui_text",
+        "z": "4e67676c.de2018",
+        "group": "ca79f64c.8975d8",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last",
+        "label": "Last [W]",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 730,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7d0ed1ae.82473",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "name": "stromLast",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 440,
         "wires": []
     }
 ]
