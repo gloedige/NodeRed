@@ -13463,7 +13463,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 570,
-        "y": 760,
+        "y": 880,
         "wires": []
     },
     {
@@ -13484,7 +13484,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 980,
+        "y": 1100,
         "wires": [
             [
                 "104efa78.291536"
@@ -13512,7 +13512,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 2250,
-        "y": 920,
+        "y": 1040,
         "wires": [
             [
                 "9a95f22d.3c083"
@@ -13524,20 +13524,20 @@
         "type": "switch",
         "z": "4e67676c.de2018",
         "name": "Aktivierung E-Heizen WZ",
-        "property": "PVPOWER",
+        "property": "minPowerEnableHeaterOne",
         "propertyType": "global",
         "rules": [
             {
-                "t": "gt",
-                "v": "minPowerEnableHeaterOne",
-                "vt": "global"
+                "t": "lte",
+                "v": "0",
+                "vt": "num"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
         "x": 1350,
-        "y": 1120,
+        "y": 1240,
         "wires": [
             [
                 "97a2036b.0979b",
@@ -13553,36 +13553,11 @@
         "right": "usr",
         "use_tls": true,
         "device_selection": "sb_tripower",
-        "x": 340,
-        "y": 80,
+        "x": 520,
+        "y": 560,
         "wires": [
             [
-                "3d88091c.fcdae6"
-            ]
-        ]
-    },
-    {
-        "id": "cb19ea21.ea9168",
-        "type": "inject",
-        "z": "4e67676c.de2018",
-        "name": "all 1 min",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 80,
-        "wires": [
-            [
-                "79699524.56251c"
+                "66707f75.a8804"
             ]
         ]
     },
@@ -13596,8 +13571,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 550,
-        "y": 80,
+        "x": 890,
+        "y": 560,
         "wires": [
             [
                 "f88934c3.febfb8"
@@ -13627,7 +13602,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 1360,
-        "y": 580,
+        "y": 700,
         "wires": [
             [
                 "a16b506a.769ca"
@@ -13987,7 +13962,7 @@
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
         "x": 1580,
-        "y": 580,
+        "y": 700,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -14015,7 +13990,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 2290,
-        "y": 1000,
+        "y": 1120,
         "wires": [
             [
                 "931f3937.d5fa18"
@@ -14029,7 +14004,7 @@
         "name": "Zeitschaltung Handtuchheizkörper",
         "info": "",
         "x": 1580,
-        "y": 540,
+        "y": 660,
         "wires": []
     },
     {
@@ -14045,7 +14020,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 2800,
-        "y": 1000,
+        "y": 1120,
         "wires": []
     },
     {
@@ -14072,7 +14047,7 @@
         "officon": "",
         "offcolor": "",
         "x": 1790,
-        "y": 940,
+        "y": 1060,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -14096,8 +14071,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 790,
-        "y": 80,
+        "x": 1090,
+        "y": 560,
         "wires": []
     },
     {
@@ -14131,7 +14106,7 @@
         "to": "",
         "reg": false,
         "x": 2540,
-        "y": 920,
+        "y": 1040,
         "wires": [
             [
                 "30f3da8a.cf2766"
@@ -14165,7 +14140,7 @@
         "animate": true,
         "className": "",
         "x": 350,
-        "y": 880,
+        "y": 1000,
         "wires": [
             [
                 "a7e8b14.06f8b5",
@@ -14205,7 +14180,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 760,
+        "y": 880,
         "wires": [
             [
                 "7177992a.27faf8"
@@ -14225,7 +14200,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 2790,
-        "y": 920,
+        "y": 1040,
         "wires": []
     },
     {
@@ -14248,7 +14223,7 @@
         "to": "",
         "reg": false,
         "x": 1070,
-        "y": 1160,
+        "y": 1280,
         "wires": [
             [
                 "3b3dcd5b.b93e82",
@@ -14261,20 +14236,20 @@
         "type": "switch",
         "z": "4e67676c.de2018",
         "name": "Deaktivierung E-Heizen WZ",
-        "property": "PVPOWER",
+        "property": "minPowerEnableHeaterOne",
         "propertyType": "global",
         "rules": [
             {
-                "t": "lt",
-                "v": "minPowerEnableHeaterOne",
-                "vt": "global"
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
         "x": 1360,
-        "y": 720,
+        "y": 840,
         "wires": [
             [
                 "b57bddc8.2876a",
@@ -14302,7 +14277,7 @@
         "to": "",
         "reg": false,
         "x": 1070,
-        "y": 760,
+        "y": 880,
         "wires": [
             [
                 "407a1e9e.862e5",
@@ -14381,13 +14356,13 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "minPowerEnableHeaterOne",
-        "func": "let heaterOne = global.get(\"maxLoadHeaterOne\");\nlet base = global.get(\"baseLoad\");\nvar payload = heaterOne+base;\nglobal.set(\"minPowerEnableHeaterOne\",payload)\n\n\nreturn msg;",
+        "func": "let heaterOne = global.get(\"maxLoadHeaterOne\");\nlet counter_output = global.get(\"LeistungZaehler\");\nvar payload = heaterOne+counter_output;\nglobal.set(\"minPowerEnableHeaterOne\",payload)\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 600,
-        "y": 260,
+        "x": 542,
+        "y": 300,
         "wires": [
             []
         ]
@@ -14396,14 +14371,15 @@
         "id": "bc52b66f.0e5818",
         "type": "function",
         "z": "4e67676c.de2018",
+        "d": true,
         "name": "baseLoad",
         "func": "var payload = msg.payload;\nif(payload>0)\n    global.set(\"baseLoad\",payload)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 540,
-        "y": 520,
+        "x": 1362,
+        "y": 300,
         "wires": [
             []
         ]
@@ -14412,6 +14388,7 @@
         "id": "31217786.488338",
         "type": "ui_numeric",
         "z": "4e67676c.de2018",
+        "d": true,
         "name": "",
         "label": "baseLoad [W]",
         "tooltip": "Grundleistung Haus",
@@ -14428,8 +14405,8 @@
         "max": "2000",
         "step": "100",
         "className": "",
-        "x": 120,
-        "y": 520,
+        "x": 1046,
+        "y": 300,
         "wires": [
             [
                 "bc52b66f.0e5818"
@@ -14440,21 +14417,21 @@
         "id": "57daf561.c4d5fc",
         "type": "inject",
         "z": "4e67676c.de2018",
-        "name": "all 1 min",
+        "name": "every 10s",
         "props": [],
-        "repeat": "60",
+        "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payloadType": "str",
-        "x": 100,
-        "y": 260,
+        "x": 190,
+        "y": 400,
         "wires": [
             [
                 "65965811.9a8258",
                 "9ed1bbe5.deaca8",
-                "4eec474f.a3f598"
+                "4eec474f.a3f598",
+                "79699524.56251c"
             ]
         ]
     },
@@ -14463,13 +14440,13 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "minPowerEnableHeaterTwo",
-        "func": "let heaterOne = global.get(\"maxLoadHeaterOne\");\nlet heaterTwo = global.get(\"maxLoadHeaterTwo\");\nlet base = global.get(\"baseLoad\");\nvar payload = heaterOne+heaterTwo+base;\n\nglobal.set(\"minPowerEnableHeaterTwo\",payload)\n\nreturn msg;",
+        "func": "let heaterOne = global.get(\"maxLoadHeaterOne\");\nlet heaterTwo = global.get(\"maxLoadHeaterTwo\");\nlet counter_output = global.get(\"LeistungZaehler\");\nvar payload = heaterOne+heaterTwo+counter_output;\n\nglobal.set(\"minPowerEnableHeaterTwo\",payload)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 600,
-        "y": 315,
+        "x": 542,
+        "y": 355,
         "wires": [
             []
         ]
@@ -14484,8 +14461,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 580,
-        "y": 580,
+        "x": 1402,
+        "y": 360,
         "wires": [
             []
         ]
@@ -14508,8 +14485,8 @@
         "min": 0,
         "max": "2000",
         "step": "250",
-        "x": 150,
-        "y": 580,
+        "x": 1076,
+        "y": 360,
         "wires": [
             [
                 "2909b7eb.3c8c28"
@@ -14526,8 +14503,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 580,
-        "y": 650,
+        "x": 1402,
+        "y": 430,
         "wires": [
             []
         ]
@@ -14550,8 +14527,8 @@
         "min": 0,
         "max": "1000",
         "step": "100",
-        "x": 150,
-        "y": 650,
+        "x": 1076,
+        "y": 430,
         "wires": [
             [
                 "438a69df.3b4648"
@@ -14563,20 +14540,20 @@
         "type": "switch",
         "z": "4e67676c.de2018",
         "name": "Aktivierung E-Heizen Bad",
-        "property": "PVPOWER",
+        "property": "minPowerEnableHeaterTwo",
         "propertyType": "global",
         "rules": [
             {
-                "t": "gt",
-                "v": "minPowerEnableHeaterTwo",
-                "vt": "global"
+                "t": "lte",
+                "v": "0",
+                "vt": "num"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
         "x": 1350,
-        "y": 1240,
+        "y": 1360,
         "wires": [
             [
                 "6417ec08.3003c4",
@@ -14615,7 +14592,7 @@
         "to": "",
         "reg": false,
         "x": 2540,
-        "y": 1000,
+        "y": 1120,
         "wires": [
             [
                 "6dbf46bf.f833b8"
@@ -14627,20 +14604,20 @@
         "type": "switch",
         "z": "4e67676c.de2018",
         "name": "Deaktivierung E-Heizen Bad",
-        "property": "PVPOWER",
+        "property": "minPowerEnableHeaterTwo",
         "propertyType": "global",
         "rules": [
             {
-                "t": "lt",
-                "v": "minPowerEnableHeaterTwo",
-                "vt": "global"
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
         "x": 1360,
-        "y": 800,
+        "y": 920,
         "wires": [
             [
                 "c8effe1c.66349",
@@ -14672,7 +14649,7 @@
         "officon": "",
         "offcolor": "",
         "x": 1770,
-        "y": 880,
+        "y": 1000,
         "wires": [
             [
                 "c2158bf7.4ce6b8",
@@ -14696,7 +14673,7 @@
         "repair": false,
         "outputs": 1,
         "x": 2000,
-        "y": 1120,
+        "y": 1240,
         "wires": [
             [
                 "d49e3fea.44d87"
@@ -14717,8 +14694,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 570,
-        "y": 1960,
+        "x": 690,
+        "y": 2140,
         "wires": [
             [
                 "4506f047.22e95"
@@ -14742,8 +14719,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 1980,
+        "x": 240,
+        "y": 2160,
         "wires": [
             [
                 "b1955526.818b68",
@@ -14763,8 +14740,8 @@
         "outputtriggeredby": "all",
         "inputCount": "2",
         "topic": "result",
-        "x": 840,
-        "y": 1987,
+        "x": 960,
+        "y": 2167,
         "wires": [
             [],
             [
@@ -14787,8 +14764,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 570,
-        "y": 2020,
+        "x": 690,
+        "y": 2200,
         "wires": [
             [
                 "4506f047.22e95"
@@ -14814,8 +14791,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
-        "y": 1960,
+        "x": 460,
+        "y": 2140,
         "wires": [
             [
                 "f37f96c.c0cef68"
@@ -14841,8 +14818,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
-        "y": 2020,
+        "x": 460,
+        "y": 2200,
         "wires": [
             [
                 "bfa8863e.921868"
@@ -14868,8 +14845,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
-        "y": 1987,
+        "x": 1270,
+        "y": 2167,
         "wires": [
             [
                 "fb7fc487.52eca8"
@@ -14889,7 +14866,7 @@
         "inputCount": "3",
         "topic": "condition",
         "x": 790,
-        "y": 880,
+        "y": 1000,
         "wires": [
             [
                 "4a25e9cf.8bb438",
@@ -14919,7 +14896,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 980,
+        "y": 1100,
         "wires": [
             [
                 "7e2231a8.fdb74"
@@ -14946,7 +14923,7 @@
         "to": "",
         "reg": false,
         "x": 510,
-        "y": 980,
+        "y": 1100,
         "wires": [
             [
                 "42ee4c8f.552404",
@@ -14960,8 +14937,8 @@
         "z": "4e67676c.de2018",
         "name": "Get Anwesenheit from WIFI Status",
         "info": "",
-        "x": 400,
-        "y": 1880,
+        "x": 520,
+        "y": 2060,
         "wires": []
     },
     {
@@ -14981,8 +14958,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1650,
-        "y": 1987,
+        "x": 1770,
+        "y": 2167,
         "wires": []
     },
     {
@@ -15015,8 +14992,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1420,
-        "y": 1987,
+        "x": 1540,
+        "y": 2167,
         "wires": [
             [
                 "1ee94e9d.293fc1"
@@ -15037,8 +15014,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 410,
-        "y": 1700,
+        "x": 530,
+        "y": 1880,
         "wires": [
             [
                 "3c339596.ca663a",
@@ -15063,8 +15040,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 1700,
+        "x": 250,
+        "y": 1880,
         "wires": [
             [
                 "53275aa9.d68424",
@@ -15091,8 +15068,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
-        "y": 1700,
+        "x": 850,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -15111,8 +15088,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 410,
-        "y": 1760,
+        "x": 530,
+        "y": 1940,
         "wires": [
             [
                 "4b9c267e.bfbaa8"
@@ -15138,8 +15115,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 1760,
+        "x": 860,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -15160,7 +15137,7 @@
         "repair": false,
         "outputs": 1,
         "x": 2006,
-        "y": 1240,
+        "y": 1360,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -15183,7 +15160,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1790,
-        "y": 720,
+        "y": 840,
         "wires": [
             [
                 "d49e3fea.44d87",
@@ -15207,7 +15184,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1790,
-        "y": 800,
+        "y": 920,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -15220,8 +15197,8 @@
         "z": "4e67676c.de2018",
         "name": "Get Status Schalter Steckdose",
         "info": "",
-        "x": 390,
-        "y": 1620,
+        "x": 510,
+        "y": 1800,
         "wires": []
     },
     {
@@ -15722,7 +15699,7 @@
         "timeout": "DelayEnableHeater",
         "timeoutType": "flow",
         "x": 1680,
-        "y": 1080,
+        "y": 1200,
         "wires": [
             [
                 "71594325.134dec"
@@ -15739,7 +15716,7 @@
         "timeout": "DelayEnableHeater",
         "timeoutType": "flow",
         "x": 1680,
-        "y": 1200,
+        "y": 1320,
         "wires": [
             [
                 "3e1d0e64.ea6d52"
@@ -15790,7 +15767,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 1290,
-        "y": 1080,
+        "y": 1200,
         "wires": [
             [
                 "97a2036b.0979b"
@@ -15815,7 +15792,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 1290,
-        "y": 1200,
+        "y": 1320,
         "wires": [
             [
                 "6417ec08.3003c4"
@@ -15840,7 +15817,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 1290,
-        "y": 1040,
+        "y": 1160,
         "wires": [
             [
                 "97a2036b.0979b"
@@ -15865,7 +15842,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 1290,
-        "y": 1160,
+        "y": 1280,
         "wires": [
             [
                 "6417ec08.3003c4"
@@ -15892,7 +15869,7 @@
         "to": "",
         "reg": false,
         "x": 2280,
-        "y": 780,
+        "y": 900,
         "wires": [
             [
                 "dbc34a34.4328e8"
@@ -15919,7 +15896,7 @@
         "to": "",
         "reg": false,
         "x": 2290,
-        "y": 840,
+        "y": 960,
         "wires": [
             [
                 "dbc34a34.4328e8"
@@ -15932,7 +15909,7 @@
         "z": "4e67676c.de2018",
         "name": "Invert",
         "x": 2730,
-        "y": 800,
+        "y": 920,
         "wires": [
             [
                 "43d0116c.ddaa3"
@@ -15952,7 +15929,7 @@
         "inputCount": "2",
         "topic": "ManuelMode",
         "x": 2520,
-        "y": 800,
+        "y": 920,
         "wires": [
             [],
             [
@@ -15970,7 +15947,7 @@
             "b23d643c.a6b948"
         ],
         "x": 2835,
-        "y": 800,
+        "y": 920,
         "wires": []
     },
     {
@@ -15982,7 +15959,7 @@
             "43d0116c.ddaa3"
         ],
         "x": 675,
-        "y": 820,
+        "y": 940,
         "wires": [
             [
                 "42ee4c8f.552404"
@@ -17501,8 +17478,8 @@
         "max": "600",
         "step": "10",
         "className": "",
-        "x": 170,
-        "y": 1380,
+        "x": 230,
+        "y": 1500,
         "wires": [
             [
                 "623cc655.63c758",
@@ -17529,8 +17506,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 657,
-        "y": 1380,
+        "x": 717,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -17631,7 +17608,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 270,
-        "y": 1080,
+        "y": 1200,
         "wires": [
             [
                 "91bbed8b.15d41"
@@ -17656,7 +17633,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 270,
-        "y": 1040,
+        "y": 1160,
         "wires": [
             [
                 "91bbed8b.15d41"
@@ -17683,7 +17660,7 @@
         "to": "",
         "reg": false,
         "x": 460,
-        "y": 1040,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -17701,7 +17678,7 @@
         "inputCount": "2",
         "topic": "condition",
         "x": 960,
-        "y": 1040,
+        "y": 1160,
         "wires": [
             [],
             [
@@ -17716,7 +17693,7 @@
         "z": "4e67676c.de2018",
         "name": "Invert",
         "x": 690,
-        "y": 940,
+        "y": 1060,
         "wires": [
             [
                 "6e38303d.bf4fb"
@@ -17729,7 +17706,7 @@
         "z": "4e67676c.de2018",
         "name": "Invert",
         "x": 690,
-        "y": 1040,
+        "y": 1160,
         "wires": [
             [
                 "6e38303d.bf4fb"
@@ -17742,7 +17719,7 @@
         "z": "4e67676c.de2018",
         "name": "Invert",
         "x": 1270,
-        "y": 940,
+        "y": 1060,
         "wires": [
             [
                 "b57bddc8.2876a",
@@ -17789,7 +17766,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 1860,
-        "y": 540,
+        "y": 660,
         "wires": [
             [
                 "a35bf6df.e74278"
@@ -17806,7 +17783,7 @@
             "33e4b66a.1cd69a"
         ],
         "x": 1955,
-        "y": 720,
+        "y": 840,
         "wires": []
     },
     {
@@ -17828,8 +17805,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 667,
-        "y": 1440,
+        "x": 727,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -17847,8 +17824,8 @@
         "truncate": false,
         "decimals": 0,
         "decimals2": 0,
-        "x": 407,
-        "y": 1440,
+        "x": 467,
+        "y": 1560,
         "wires": [
             [
                 "a640c0f0.65376"
@@ -17874,8 +17851,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 1640,
+        "x": 1030,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -17895,8 +17872,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 690,
-        "y": 1640,
+        "x": 810,
+        "y": 1820,
         "wires": [
             [
                 "17dfd6f3.389899"
@@ -17920,8 +17897,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 590,
-        "y": 1560,
+        "x": 710,
+        "y": 1740,
         "wires": [
             [
                 "bab48843.7408a8"
@@ -17935,8 +17912,8 @@
         "name": "Time heater inaktive",
         "persistId": "",
         "humanizeLocale": "de",
-        "x": 840,
-        "y": 2360,
+        "x": 960,
+        "y": 2540,
         "wires": [
             [
                 "1955fb8c.8e34f4",
@@ -17957,8 +17934,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
-        "y": 2420,
+        "x": 1190,
+        "y": 2600,
         "wires": []
     },
     {
@@ -17980,8 +17957,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
-        "y": 2380,
+        "x": 720,
+        "y": 2560,
         "wires": [
             [
                 "e1e99a92.0587e8"
@@ -18007,8 +17984,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
-        "y": 2500,
+        "x": 700,
+        "y": 2680,
         "wires": [
             [
                 "e1e99a92.0587e8"
@@ -18034,8 +18011,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
-        "y": 2320,
+        "x": 570,
+        "y": 2500,
         "wires": [
             [
                 "e1e99a92.0587e8"
@@ -18061,8 +18038,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 2600,
+        "x": 690,
+        "y": 2780,
         "wires": [
             [
                 "e1e99a92.0587e8"
@@ -18086,8 +18063,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 350,
-        "y": 2500,
+        "x": 470,
+        "y": 2680,
         "wires": [
             [
                 "2fb7a296.8f91ce"
@@ -18115,8 +18092,8 @@
         "topic": "condition",
         "payload": "false",
         "payloadType": "bool",
-        "x": 200,
-        "y": 2440,
+        "x": 320,
+        "y": 2620,
         "wires": [
             [
                 "ff20a5e4.6e93c8"
@@ -18149,8 +18126,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1280,
-        "y": 2360,
+        "x": 1400,
+        "y": 2540,
         "wires": [
             []
         ]
@@ -18163,8 +18140,8 @@
         "links": [
             "a35bf6df.e74278"
         ],
-        "x": 275,
-        "y": 2320,
+        "x": 395,
+        "y": 2500,
         "wires": [
             [
                 "660a526b.9a221c",
@@ -18182,8 +18159,8 @@
         "invert": false,
         "timeout": "3",
         "timeoutType": "num",
-        "x": 440,
-        "y": 2380,
+        "x": 560,
+        "y": 2560,
         "wires": [
             [
                 "7c3dcf09.8766c"
@@ -18207,8 +18184,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1070,
-        "y": 2360,
+        "x": 1190,
+        "y": 2540,
         "wires": [
             [
                 "3ef2cf36.5cdc6"
@@ -18232,8 +18209,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 310,
-        "y": 2600,
+        "x": 430,
+        "y": 2780,
         "wires": [
             [
                 "ba9a285.1d43cd8"
@@ -18249,8 +18226,8 @@
         "invert": false,
         "timeout": 1,
         "timeoutType": "num",
-        "x": 340,
-        "y": 2540,
+        "x": 460,
+        "y": 2720,
         "wires": [
             [
                 "2fb7a296.8f91ce"
@@ -18274,8 +18251,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 450,
-        "y": 2440,
+        "x": 570,
+        "y": 2620,
         "wires": [
             [
                 "7c3dcf09.8766c"
@@ -18301,8 +18278,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
-        "y": 2260,
+        "x": 630,
+        "y": 2440,
         "wires": [
             []
         ]
@@ -18313,8 +18290,8 @@
         "z": "4e67676c.de2018",
         "name": "Timer to last heater activation",
         "info": "",
-        "x": 380,
-        "y": 2180,
+        "x": 500,
+        "y": 2360,
         "wires": []
     },
     {
@@ -18326,7 +18303,7 @@
             "9eda0c45.68db5"
         ],
         "x": 1515,
-        "y": 940,
+        "y": 1060,
         "wires": []
     },
     {
@@ -18337,8 +18314,8 @@
         "links": [
             "5d2d17a.d29fbe8"
         ],
-        "x": 235,
-        "y": 2380,
+        "x": 355,
+        "y": 2560,
         "wires": [
             [
                 "ff20a5e4.6e93c8"
@@ -18361,7 +18338,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1690,
-        "y": 1260,
+        "y": 1380,
         "wires": [
             [
                 "3e1d0e64.ea6d52"
@@ -18384,7 +18361,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1690,
-        "y": 1140,
+        "y": 1260,
         "wires": [
             [
                 "71594325.134dec"
@@ -23790,7 +23767,7 @@
         "blindPosReverse": false,
         "blindPosDefault": "open (max)",
         "blindPosDefaultType": "levelFixed",
-        "overwriteExpire": "",
+        "overwriteExpire": "7200000",
         "rules": [
             {
                 "index": 0,
@@ -23993,7 +23970,8 @@
         "wires": [
             [
                 "5be3d0b2.aec738",
-                "a895192a.6defd"
+                "a895192a.6defd",
+                "1a589a7f.b0eeb6"
             ]
         ]
     },
@@ -24275,13 +24253,11 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 300,
-        "y": 2840,
+        "x": 1800,
+        "y": 380,
         "wires": [
             [
-                "8b1a7f0c.5a068",
-                "eac503ff.dda2f",
-                "54d96d17.bd1214"
+                "a13bc096.811ba"
             ]
         ]
     },
@@ -24323,8 +24299,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 630,
-        "y": 2840,
+        "x": 2290,
+        "y": 380,
         "wires": [
             []
         ]
@@ -24346,8 +24322,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 610,
-        "y": 2900,
+        "x": 2270,
+        "y": 440,
         "wires": []
     },
     {
@@ -24355,13 +24331,13 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "Leistung Zähler",
-        "func": "var payload = msg.payload;\nif(payload>0)\n    global.set(\"LeistungZaehler\",payload)\nreturn msg;",
+        "func": "var payload = msg.payload;\nglobal.set(\"LeistungZaehler\",payload)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 600,
-        "y": 2780,
+        "x": 2260,
+        "y": 320,
         "wires": [
             []
         ]
@@ -24376,12 +24352,12 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 540,
-        "y": 380,
+        "x": 482,
+        "y": 420,
         "wires": [
             [
-                "10806c1b.ebdf64",
-                "7d0ed1ae.82473"
+                "7d0ed1ae.82473",
+                "10806c1b.ebdf64"
             ]
         ]
     },
@@ -24402,8 +24378,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 730,
-        "y": 380,
+        "x": 670,
+        "y": 420,
         "wires": []
     },
     {
@@ -24419,8 +24395,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 440,
+        "x": 682,
+        "y": 480,
         "wires": []
     },
     {
@@ -24438,6 +24414,157 @@
         "wires": [
             [
                 "a9c43fd4.d60d1"
+            ]
+        ]
+    },
+    {
+        "id": "f9973c95.a4b6c",
+        "type": "ccu-value",
+        "z": "db6aac1c.cd43b",
+        "name": "Rollo WZ Doppel West 1",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2283163:1 Rollo Wohnzimmer Doppelfenster 1",
+        "datapoint": "LEVEL",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 590,
+        "y": 2080,
+        "wires": [
+            [
+                "6b6f61a.a56e9a"
+            ]
+        ]
+    },
+    {
+        "id": "f3f7dd49.d6fcc",
+        "type": "ccu-value",
+        "z": "db6aac1c.cd43b",
+        "name": "Rollo WZ Doppel West 2",
+        "iface": "BidCos-RF",
+        "channel": "PEQ0004299:1 Rollo Wohnzimmer Doppelfenster 2",
+        "datapoint": "LEVEL",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 590,
+        "y": 2180,
+        "wires": [
+            [
+                "6b6f61a.a56e9a"
+            ]
+        ]
+    },
+    {
+        "id": "6b6f61a.a56e9a",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "-1",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "levelOverwrite",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 848,
+        "y": 2131,
+        "wires": [
+            [
+                "e2b04b87.872ac8"
+            ]
+        ]
+    },
+    {
+        "id": "1a589a7f.b0eeb6",
+        "type": "debug",
+        "z": "db6aac1c.cd43b",
+        "name": "checkOverwrite",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "66707f75.a8804",
+        "type": "calculator",
+        "z": "4e67676c.de2018",
+        "name": "round",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "rdec",
+        "constant": "0",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": 0,
+        "x": 710,
+        "y": 560,
+        "wires": [
+            [
+                "3d88091c.fcdae6"
+            ]
+        ]
+    },
+    {
+        "id": "a13bc096.811ba",
+        "type": "calculator",
+        "z": "4e67676c.de2018",
+        "name": "round",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "rdec",
+        "constant": "0",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": 0,
+        "x": 1990,
+        "y": 380,
+        "wires": [
+            [
+                "54d96d17.bd1214",
+                "8b1a7f0c.5a068",
+                "eac503ff.dda2f"
             ]
         ]
     }
