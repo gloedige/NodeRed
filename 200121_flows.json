@@ -490,7 +490,7 @@
         "type": "ui_group",
         "name": "Heizung manuell",
         "tab": "4be192bf.76117c",
-        "order": 1,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false
@@ -511,7 +511,7 @@
         "type": "ui_group",
         "name": "Messwert",
         "tab": "4be192bf.76117c",
-        "order": 3,
+        "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false
@@ -16438,12 +16438,16 @@
             {
                 "index": 1,
                 "name": "Abendbeleuchtung aus",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "23:00",
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": true,
+                    "validPayload": true,
+                    "validOperand1A": true
+                },
+                "timeValue": "22:00",
                 "timeType": "entered",
                 "timeOp": 1,
-                "timeOpText": "↧ von",
+                "timeOpText": "↧ from",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 3600000,
@@ -16468,14 +16472,14 @@
                 "payloadOffsetValue": "",
                 "payloadOffsetType": "none",
                 "payloadOffsetMultiplier": 3600000,
-                "payloadFormat": 99,
+                "payloadFormat": "",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
                 "validOperandAValue": "",
                 "validOperandAType": "none",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -16483,12 +16487,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>23:00</var></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload:</span> <var>false</var></div></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>22:00</var></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>"
             }
         ],
         "payloadDefault": "",
@@ -16554,7 +16556,7 @@
         "id": "3bd3e0b8.15cd8",
         "type": "change",
         "z": "33898250.03adbe",
-        "name": "Helligkeit = 20%",
+        "name": "Helligkeit = 30%",
         "rules": [
             {
                 "t": "move",
@@ -16567,7 +16569,7 @@
                 "t": "set",
                 "p": "payload.brightness",
                 "pt": "msg",
-                "to": "20",
+                "to": "30",
                 "tot": "num"
             }
         ],
