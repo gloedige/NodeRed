@@ -13553,7 +13553,7 @@
         "right": "usr",
         "use_tls": true,
         "device_selection": "sb_tripower",
-        "x": 520,
+        "x": 500,
         "y": 560,
         "wires": [
             [
@@ -14425,14 +14425,14 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payloadType": "str",
         "x": 190,
         "y": 400,
         "wires": [
             [
                 "65965811.9a8258",
                 "9ed1bbe5.deaca8",
-                "4eec474f.a3f598",
-                "79699524.56251c"
+                "4eec474f.a3f598"
             ]
         ]
     },
@@ -24576,7 +24576,7 @@
         "type": "debug",
         "z": "4e67676c.de2018",
         "name": "tripower",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24584,8 +24584,33 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
+        "x": 700,
         "y": 660,
         "wires": []
+    },
+    {
+        "id": "db543fac.8393e",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "all 1 min",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "79699524.56251c"
+            ]
+        ]
     }
 ]
