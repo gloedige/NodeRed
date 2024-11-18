@@ -13557,7 +13557,8 @@
         "y": 560,
         "wires": [
             [
-                "66707f75.a8804"
+                "66707f75.a8804",
+                "5ae170e2.03e0f"
             ]
         ]
     },
@@ -24514,7 +24515,7 @@
         "type": "debug",
         "z": "db6aac1c.cd43b",
         "name": "checkOverwrite",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24569,5 +24570,22 @@
                 "eac503ff.dda2f"
             ]
         ]
+    },
+    {
+        "id": "5ae170e2.03e0f",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "name": "tripower",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 660,
+        "wires": []
     }
 ]
