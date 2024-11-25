@@ -13553,12 +13553,11 @@
         "right": "usr",
         "use_tls": true,
         "device_selection": "sb_tripower",
-        "x": 500,
-        "y": 560,
+        "x": 2020,
+        "y": 500,
         "wires": [
             [
-                "66707f75.a8804",
-                "5ae170e2.03e0f"
+                "66707f75.a8804"
             ]
         ]
     },
@@ -13567,16 +13566,17 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "PVPOWER",
-        "func": "var payload = msg.payload.power;\nif(payload>0)\n    global.set(\"PVPOWER\",payload)\nelse\n    global.set(\"PVPOWER\", 0)\nreturn msg;",
+        "func": "var payload = msg.payload.pv_power;\nif(payload>0)\n    global.set(\"PVPOWER\",payload)\nelse\n    global.set(\"PVPOWER\", 0)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 890,
-        "y": 560,
+        "x": 2410,
+        "y": 500,
         "wires": [
             [
-                "f88934c3.febfb8"
+                "f88934c3.febfb8",
+                "8b1a7f0c.5a068"
             ]
         ]
     },
@@ -14065,15 +14065,15 @@
         "height": "0",
         "name": "PV Leistung",
         "label": "PV Leistung [W]",
-        "format": "{{msg.payload.power}}",
+        "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1090,
-        "y": 560,
+        "x": 2610,
+        "y": 500,
         "wires": []
     },
     {
@@ -24255,7 +24255,7 @@
         "rampType": "undefined",
         "working": false,
         "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "topic": "Leistung_Zähler",
         "x": 1800,
         "y": 380,
         "wires": [
@@ -24268,14 +24268,14 @@
         "id": "8b1a7f0c.5a068",
         "type": "ui_chart",
         "z": "4e67676c.de2018",
-        "name": "Leistung Zähler Plot [W]",
+        "name": "Leistung Plot [W]",
         "group": "ca79f64c.8975d8",
         "order": 4,
         "width": "6",
-        "height": "4",
-        "label": "Leistung Zähler Plot [W]",
+        "height": "5",
+        "label": "Leistung Plot [W]",
         "chartType": "line",
-        "legend": "false",
+        "legend": "true",
         "xformat": "HH:mm",
         "interpolate": "linear",
         "nodata": "",
@@ -24289,8 +24289,8 @@
         "useOneColor": false,
         "useUTC": false,
         "colors": [
-            "#1f77b4",
-            "#aec7e8",
+            "#2ca02c",
+            "#ea1f1f",
             "#ff7f0e",
             "#2ca02c",
             "#98df8a",
@@ -24302,7 +24302,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2290,
+        "x": 2730,
         "y": 380,
         "wires": [
             []
@@ -24532,7 +24532,7 @@
         "type": "calculator",
         "z": "4e67676c.de2018",
         "name": "round",
-        "inputMsgField": "payload",
+        "inputMsgField": "payload.power",
         "outputMsgField": "payload",
         "operation": "rdec",
         "constant": "0",
@@ -24540,11 +24540,12 @@
         "truncate": false,
         "decimals": "0",
         "decimals2": 0,
-        "x": 710,
-        "y": 560,
+        "x": 2230,
+        "y": 500,
         "wires": [
             [
-                "3d88091c.fcdae6"
+                "3d88091c.fcdae6",
+                "5ae170e2.03e0f"
             ]
         ]
     },
@@ -24584,8 +24585,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 660,
+        "x": 2320,
+        "y": 600,
         "wires": []
     },
     {
@@ -24596,17 +24597,21 @@
         "props": [
             {
                 "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
             }
         ],
         "repeat": "60",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "Leistung_PV",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 560,
+        "x": 1800,
+        "y": 500,
         "wires": [
             [
                 "79699524.56251c"
