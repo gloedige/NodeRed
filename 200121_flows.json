@@ -13525,7 +13525,7 @@
         "z": "4e67676c.de2018",
         "name": "Aktivierung E-Heizen WZ",
         "property": "minPowerEnableHeaterOne",
-        "propertyType": "global",
+        "propertyType": "flow",
         "rules": [
             {
                 "t": "lte",
@@ -13566,7 +13566,7 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "PVPOWER",
-        "func": "var payload = msg.payload.pv_power;\nif(payload>0)\n    global.set(\"PVPOWER\",payload)\nelse\n    global.set(\"PVPOWER\", 0)\nreturn msg;",
+        "func": "var payload = msg.payload;\nif(payload>0)\n    flow.set(\"PVPOWER\",payload)\nelse\n    flow.set(\"PVPOWER\", 0)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14238,7 +14238,7 @@
         "z": "4e67676c.de2018",
         "name": "Deaktivierung E-Heizen WZ",
         "property": "minPowerEnableHeaterOne",
-        "propertyType": "global",
+        "propertyType": "flow",
         "rules": [
             {
                 "t": "gt",
@@ -14254,7 +14254,8 @@
         "wires": [
             [
                 "b57bddc8.2876a",
-                "97a2036b.0979b"
+                "97a2036b.0979b",
+                "258728a7.05d2a8"
             ]
         ]
     },
@@ -14357,7 +14358,7 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "minPowerEnableHeaterOne",
-        "func": "let heaterOne = global.get(\"maxLoadHeaterOne\");\nlet counter_output = global.get(\"LeistungZaehler\");\nvar payload = heaterOne+counter_output;\nglobal.set(\"minPowerEnableHeaterOne\",payload)\n\n\nreturn msg;",
+        "func": "let heaterOne = flow.get(\"maxLoadHeaterOne\");\nlet counter_output = flow.get(\"LeistungZaehler\");\nvar payload = heaterOne+counter_output;\nflow.set(\"minPowerEnableHeaterOne\",payload)\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14441,7 +14442,7 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "minPowerEnableHeaterTwo",
-        "func": "let heaterOne = global.get(\"maxLoadHeaterOne\");\nlet heaterTwo = global.get(\"maxLoadHeaterTwo\");\nlet counter_output = global.get(\"LeistungZaehler\");\nvar payload = heaterOne+heaterTwo+counter_output;\n\nglobal.set(\"minPowerEnableHeaterTwo\",payload)\n\nreturn msg;",
+        "func": "let heaterOne = flow.get(\"maxLoadHeaterOne\");\nlet heaterTwo = flow.get(\"maxLoadHeaterTwo\");\nlet counter_output = flow.get(\"LeistungZaehler\");\nvar payload = heaterOne+heaterTwo+counter_output;\n\nflow.set(\"minPowerEnableHeaterTwo\",payload)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14457,7 +14458,7 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "maxLoadHeaterOne",
-        "func": "var payload = msg.payload;\nif(payload>0)\n    global.set(\"maxLoadHeaterOne\",payload)\nreturn msg;",
+        "func": "var payload = msg.payload;\nif(payload>0)\n    flow.set(\"maxLoadHeaterOne\",payload)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14499,7 +14500,7 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "maxLoadHeaterTwo",
-        "func": "var payload = msg.payload;\nif(payload>0)\n    global.set(\"maxLoadHeaterTwo\",payload)\nreturn msg;",
+        "func": "var payload = msg.payload;\nif(payload>0)\n    flow.set(\"maxLoadHeaterTwo\",payload)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14542,7 +14543,7 @@
         "z": "4e67676c.de2018",
         "name": "Aktivierung E-Heizen Bad",
         "property": "minPowerEnableHeaterTwo",
-        "propertyType": "global",
+        "propertyType": "flow",
         "rules": [
             {
                 "t": "lte",
@@ -14606,7 +14607,7 @@
         "z": "4e67676c.de2018",
         "name": "Deaktivierung E-Heizen Bad",
         "property": "minPowerEnableHeaterTwo",
-        "propertyType": "global",
+        "propertyType": "flow",
         "rules": [
             {
                 "t": "gt",
@@ -24334,7 +24335,7 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "Leistung Zähler",
-        "func": "var payload = msg.payload;\nglobal.set(\"LeistungZaehler\",payload)\nreturn msg;",
+        "func": "var payload = msg.payload;\nflow.set(\"LeistungZaehler\",payload)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -24350,7 +24351,7 @@
         "type": "function",
         "z": "4e67676c.de2018",
         "name": "stromLast",
-        "func": "let pv_leistung = global.get(\"PVPOWER\");\nlet einspeise_leistung = global.get(\"LeistungZaehler\");\nvar payload = pv_leistung+einspeise_leistung;\nflow.set(\"stromLast\",payload)\nmsg.payload = payload\n\nreturn msg;",
+        "func": "let pv_leistung = flow.get(\"PVPOWER\");\nlet einspeise_leistung = flow.get(\"LeistungZaehler\");\nvar payload = pv_leistung+einspeise_leistung;\nflow.set(\"stromLast\",payload)\nmsg.payload = payload\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -24617,5 +24618,22 @@
                 "79699524.56251c"
             ]
         ]
+    },
+    {
+        "id": "258728a7.05d2a8",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "name": "disable heater WZ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 780,
+        "wires": []
     }
 ]
