@@ -14237,7 +14237,7 @@
         "type": "switch",
         "z": "4e67676c.de2018",
         "name": "Deaktivierung E-Heizen WZ",
-        "property": "minPowerEnableHeaterOne",
+        "property": "LeistungZaehler",
         "propertyType": "flow",
         "rules": [
             {
@@ -14606,12 +14606,12 @@
         "type": "switch",
         "z": "4e67676c.de2018",
         "name": "Deaktivierung E-Heizen Bad",
-        "property": "minPowerEnableHeaterTwo",
+        "property": "LeistungZaehler",
         "propertyType": "flow",
         "rules": [
             {
                 "t": "gt",
-                "v": "0",
+                "v": "-300",
                 "vt": "num"
             }
         ],
@@ -24274,7 +24274,7 @@
         "order": 4,
         "width": "6",
         "height": "5",
-        "label": "Leistung Plot [W]",
+        "label": "",
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm",
