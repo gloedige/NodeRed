@@ -13511,8 +13511,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2250,
-        "y": 1040,
+        "x": 2470,
+        "y": 1020,
         "wires": [
             [
                 "9a95f22d.3c083"
@@ -13990,8 +13990,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2290,
-        "y": 1120,
+        "x": 2510,
+        "y": 1100,
         "wires": [
             [
                 "931f3937.d5fa18"
@@ -14020,8 +14020,8 @@
         "label": "Status Heizung Bad",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2800,
-        "y": 1120,
+        "x": 3020,
+        "y": 1100,
         "wires": []
     },
     {
@@ -14106,8 +14106,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2540,
-        "y": 1040,
+        "x": 2760,
+        "y": 1020,
         "wires": [
             [
                 "30f3da8a.cf2766"
@@ -14200,8 +14200,8 @@
         "label": "Status Heizung EG",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2790,
-        "y": 1040,
+        "x": 3010,
+        "y": 1020,
         "wires": []
     },
     {
@@ -14593,8 +14593,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2540,
-        "y": 1120,
+        "x": 2760,
+        "y": 1100,
         "wires": [
             [
                 "6dbf46bf.f833b8"
@@ -15142,7 +15142,7 @@
         "y": 1360,
         "wires": [
             [
-                "5d90d03.ab8c03"
+                "9494af6f.c5c6e"
             ]
         ]
     },
@@ -15189,7 +15189,7 @@
         "y": 920,
         "wires": [
             [
-                "5d90d03.ab8c03"
+                "246d4878.eeff28"
             ]
         ]
     },
@@ -15870,7 +15870,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2280,
+        "x": 2480,
         "y": 900,
         "wires": [
             [
@@ -15897,7 +15897,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2290,
+        "x": 2490,
         "y": 960,
         "wires": [
             [
@@ -15910,7 +15910,7 @@
         "type": "InvertUltimate",
         "z": "4e67676c.de2018",
         "name": "Invert",
-        "x": 2730,
+        "x": 2930,
         "y": 920,
         "wires": [
             [
@@ -15930,7 +15930,7 @@
         "outputtriggeredby": "all",
         "inputCount": "2",
         "topic": "ManuelMode",
-        "x": 2520,
+        "x": 2720,
         "y": 920,
         "wires": [
             [],
@@ -15948,7 +15948,7 @@
         "links": [
             "b23d643c.a6b948"
         ],
-        "x": 2835,
+        "x": 3035,
         "y": 920,
         "wires": []
     },
@@ -16157,7 +16157,7 @@
         "label": "set Motiondetection Terrasse",
         "tooltip": "set Motiondetection",
         "group": "d8ed037.4a1b3",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -16226,7 +16226,7 @@
         "z": "33898250.03adbe",
         "d": true,
         "group": "d8ed037.4a1b3",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -16359,8 +16359,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 660,
-        "y": 900,
+        "x": 640,
+        "y": 940,
         "wires": [
             [
                 "3bd3e0b8.15cd8",
@@ -16501,8 +16501,8 @@
         "payloadDefaultOffset": 0,
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
-        "x": 410,
-        "y": 900,
+        "x": 390,
+        "y": 940,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -16530,8 +16530,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 900,
+        "x": 180,
+        "y": 940,
         "wires": [
             [
                 "8ccc23f5.2f2a1"
@@ -16548,8 +16548,8 @@
         "colornamer": true,
         "skipevents": false,
         "universalevents": false,
-        "x": 1090,
-        "y": 900,
+        "x": 1070,
+        "y": 940,
         "wires": [
             []
         ]
@@ -16580,8 +16580,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 900,
+        "x": 860,
+        "y": 940,
         "wires": [
             [
                 "5cfaa7da.11fd38"
@@ -16605,8 +16605,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 410,
-        "y": 1020,
+        "x": 390,
+        "y": 1060,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -16630,8 +16630,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 410,
-        "y": 980,
+        "x": 390,
+        "y": 1020,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -16644,8 +16644,8 @@
         "z": "33898250.03adbe",
         "name": "Zeitschaltung Licht Tür außen",
         "info": "",
-        "x": 240,
-        "y": 840,
+        "x": 220,
+        "y": 880,
         "wires": []
     },
     {
@@ -16656,10 +16656,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "60",
@@ -16669,8 +16665,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 1160,
+        "x": 180,
+        "y": 1240,
         "wires": [
             [
                 "40467110.96d8e"
@@ -16682,7 +16678,7 @@
         "type": "clock-timer",
         "z": "33898250.03adbe",
         "name": "Zeiten Weihnachtssterne",
-        "topic": "",
+        "topic": "x-mas zeitschalt",
         "positionConfig": "6ad7a531.04aedc",
         "outputs": "1",
         "autoTrigger": false,
@@ -16704,11 +16700,11 @@
                 "offsetType": "none",
                 "multiplier": 60000,
                 "timeDays": "1,2,3,4,5",
-                "timeMonths": "11",
+                "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
-                "timeDateStart": "2000-12-01",
-                "timeDateEnd": "2023-12-23",
+                "timeDateStart": "2024-11-24",
+                "timeDateEnd": "2025-01-06",
                 "timeMinValue": "",
                 "timeMinType": "none",
                 "offsetMinValue": "",
@@ -16742,7 +16738,7 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>6:30</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>6:30</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -16754,16 +16750,16 @@
                 "timeValue": "7:45",
                 "timeType": "entered",
                 "timeOp": 1,
-                "timeOpText": "↧ von",
+                "timeOpText": "↧ from",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
                 "timeDays": "1,2,3,4,5",
-                "timeMonths": "11",
+                "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
+                "timeDateStart": "2024-11-24",
+                "timeDateEnd": "2025-01-06",
                 "timeMinValue": "",
                 "timeMinType": "none",
                 "offsetMinValue": "",
@@ -16786,7 +16782,7 @@
                 "validOperandAValue": "",
                 "validOperandAType": "none",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -16794,10 +16790,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>7:45</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an folgenden Tagen</span> <var>Mo-Fr</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an folgenden Monaten</span> <var>Dez</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload:</span> <var>false</var></div></div>",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>7:45</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -16809,16 +16805,16 @@
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
-                "timeOpText": "↧ von",
+                "timeOpText": "↧ from",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
                 "timeDays": "*",
-                "timeMonths": "11",
+                "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
+                "timeDateStart": "2024-11-24",
+                "timeDateEnd": "2025-01-06",
                 "timeMinValue": "",
                 "timeMinType": "none",
                 "offsetMinValue": "",
@@ -16841,7 +16837,7 @@
                 "validOperandAValue": "",
                 "validOperandAType": "none",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -16849,10 +16845,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an folgenden Monaten</span> <var>Dez</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload:</span> <var>true</var></div></div>",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -16864,16 +16860,16 @@
                 "timeValue": "21:30",
                 "timeType": "entered",
                 "timeOp": 1,
-                "timeOpText": "↧ von",
+                "timeOpText": "↧ from",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
                 "timeDays": "*",
-                "timeMonths": "11",
+                "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
+                "timeDateStart": "2024-11-24",
+                "timeDateEnd": "2025-01-06",
                 "timeMinValue": "",
                 "timeMinType": "none",
                 "offsetMinValue": "",
@@ -16896,7 +16892,7 @@
                 "validOperandAValue": "",
                 "validOperandAType": "none",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -16904,10 +16900,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>21:30</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an folgenden Monaten</span> <var>Dez</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload:</span> <var>false</var></div></div>",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>21:30</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             }
@@ -16918,11 +16914,11 @@
         "payloadDefaultOffset": 0,
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
-        "x": 450,
-        "y": 1160,
+        "x": 430,
+        "y": 1240,
         "wires": [
             [
-                "c9ee7bec.6cfc58"
+                "5e3c561.cb9f2a8"
             ]
         ]
     },
@@ -16932,8 +16928,8 @@
         "z": "33898250.03adbe",
         "name": "Zeitschaltung Weihnachtssterne",
         "info": "",
-        "x": 230,
-        "y": 1100,
+        "x": 210,
+        "y": 1180,
         "wires": []
     },
     {
@@ -16948,15 +16944,14 @@
         "label": "Status Weihnachtssterne",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1270,
-        "y": 1160,
+        "x": 1530,
+        "y": 1220,
         "wires": []
     },
     {
         "id": "c9ee7bec.6cfc58",
         "type": "ccu-value",
         "z": "33898250.03adbe",
-        "d": true,
         "name": "Steckdosenaufsatz Bad",
         "iface": "HmIP-RF",
         "channel": "00021D89A1BE2B:3 HMIP-PS 00021D89A1BE2B:3",
@@ -16973,8 +16968,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 790,
-        "y": 1160,
+        "x": 1050,
+        "y": 1220,
         "wires": [
             [
                 "6ef47f45.b604b"
@@ -17086,8 +17081,8 @@
         "label": "State Light Entrance",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1100,
-        "y": 820,
+        "x": 1080,
+        "y": 860,
         "wires": []
     },
     {
@@ -17120,8 +17115,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 820,
+        "x": 860,
+        "y": 860,
         "wires": [
             [
                 "f7c020de.a2e2f"
@@ -17158,8 +17153,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 1160,
+        "x": 1300,
+        "y": 1220,
         "wires": [
             [
                 "d57fc8ff.90ea68"
@@ -17298,7 +17293,7 @@
         "label": "Light Terrace manual",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 3,
+        "order": 4,
         "width": "6",
         "height": "1",
         "passthru": true,
@@ -17400,7 +17395,7 @@
         "label": "Time Light Terrace On [s]",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "wrap": false,
@@ -18516,8 +18511,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 500,
-        "y": 1400,
+        "x": 480,
+        "y": 1560,
         "wires": [
             [
                 "abfbc502.a97108"
@@ -18544,8 +18539,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 490,
-        "y": 1480,
+        "x": 470,
+        "y": 1640,
         "wires": [
             [
                 "227d665c.efa68a"
@@ -18572,8 +18567,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 490,
-        "y": 1560,
+        "x": 470,
+        "y": 1720,
         "wires": [
             [
                 "59f5c9a1.8c6698"
@@ -18610,8 +18605,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 1400,
+        "x": 720,
+        "y": 1560,
         "wires": [
             [
                 "c9829f64.4a97f"
@@ -18648,8 +18643,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 1480,
+        "x": 720,
+        "y": 1640,
         "wires": [
             [
                 "1cc49d1a.4a4303"
@@ -18686,8 +18681,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 1560,
+        "x": 720,
+        "y": 1720,
         "wires": [
             [
                 "9f683ba.57e03c8"
@@ -18711,8 +18706,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1000,
-        "y": 1400,
+        "x": 980,
+        "y": 1560,
         "wires": []
     },
     {
@@ -18732,8 +18727,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1010,
-        "y": 1480,
+        "x": 990,
+        "y": 1640,
         "wires": []
     },
     {
@@ -18753,8 +18748,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 990,
-        "y": 1560,
+        "x": 970,
+        "y": 1720,
         "wires": []
     },
     {
@@ -18763,40 +18758,6 @@
         "z": "33898250.03adbe",
         "name": "Light basement",
         "label": "Light basement",
-        "tooltip": "",
-        "group": "d8ed037.4a1b3",
-        "order": 5,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "className": "",
-        "x": 200,
-        "y": 1400,
-        "wires": [
-            [
-                "74ac1640.f64b38"
-            ]
-        ]
-    },
-    {
-        "id": "c8d275a5.aeb498",
-        "type": "ui_switch",
-        "z": "33898250.03adbe",
-        "name": "Light ground floor",
-        "label": "Light ground floor",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
         "order": 6,
@@ -18817,20 +18778,20 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 210,
-        "y": 1480,
+        "x": 180,
+        "y": 1560,
         "wires": [
             [
-                "376422a.e17a5de"
+                "74ac1640.f64b38"
             ]
         ]
     },
     {
-        "id": "3f52ca33.6e2f76",
+        "id": "c8d275a5.aeb498",
         "type": "ui_switch",
         "z": "33898250.03adbe",
-        "name": "Light hallway",
-        "label": "Light hallway",
+        "name": "Light ground floor",
+        "label": "Light ground floor",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
         "order": 7,
@@ -18852,7 +18813,41 @@
         "animate": true,
         "className": "",
         "x": 190,
-        "y": 1560,
+        "y": 1640,
+        "wires": [
+            [
+                "376422a.e17a5de"
+            ]
+        ]
+    },
+    {
+        "id": "3f52ca33.6e2f76",
+        "type": "ui_switch",
+        "z": "33898250.03adbe",
+        "name": "Light hallway",
+        "label": "Light hallway",
+        "tooltip": "",
+        "group": "d8ed037.4a1b3",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 170,
+        "y": 1720,
         "wires": [
             [
                 "e4874526.d5cdf8"
@@ -18865,8 +18860,8 @@
         "z": "33898250.03adbe",
         "name": "Licht im Flur",
         "info": "",
-        "x": 170,
-        "y": 1320,
+        "x": 150,
+        "y": 1480,
         "wires": []
     },
     {
@@ -24635,5 +24630,237 @@
         "x": 1590,
         "y": 780,
         "wires": []
+    },
+    {
+        "id": "1e05ddb5.b39742",
+        "type": "ui_switch",
+        "z": "33898250.03adbe",
+        "name": "",
+        "label": "set x-mas lights",
+        "tooltip": "",
+        "group": "d8ed037.4a1b3",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "x-mas lights",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 1320,
+        "wires": [
+            [
+                "4c8b50e.24803b"
+            ]
+        ]
+    },
+    {
+        "id": "4c8b50e.24803b",
+        "type": "switch",
+        "z": "33898250.03adbe",
+        "name": "check topic",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 1320,
+        "wires": [
+            [
+                "5e3c561.cb9f2a8",
+                "c155aa03.11ffc8"
+            ],
+            [
+                "4b1def1a.7c31c"
+            ]
+        ]
+    },
+    {
+        "id": "5e3c561.cb9f2a8",
+        "type": "BooleanLogicUltimate",
+        "z": "33898250.03adbe",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "false",
+        "triggertopic": "trigger",
+        "outputtriggeredby": "all",
+        "inputCount": 2,
+        "topic": "result",
+        "x": 760,
+        "y": 1240,
+        "wires": [
+            [
+                "c9ee7bec.6cfc58"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9fa5487.a0cb3b8",
+        "type": "debug",
+        "z": "33898250.03adbe",
+        "name": "check x-mas lights 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "d4f34cdb.2a9cd",
+        "type": "debug",
+        "z": "33898250.03adbe",
+        "name": "check x-mas lights 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "c155aa03.11ffc8",
+        "type": "InvertUltimate",
+        "z": "33898250.03adbe",
+        "name": "Invert",
+        "x": 730,
+        "y": 1300,
+        "wires": [
+            [
+                "c2e3f299.40414"
+            ]
+        ]
+    },
+    {
+        "id": "c2e3f299.40414",
+        "type": "link out",
+        "z": "33898250.03adbe",
+        "name": "x-mas lights inaktiv",
+        "links": [
+            "649c6666.7184a8"
+        ],
+        "x": 915,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "9494af6f.c5c6e",
+        "type": "BooleanLogicUltimate",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "filtertrue": "onlytrue",
+        "persist": true,
+        "sInitializeWith": "false",
+        "triggertopic": "trigger",
+        "outputtriggeredby": "all",
+        "inputCount": 2,
+        "topic": "result",
+        "x": 2230,
+        "y": 1360,
+        "wires": [
+            [
+                "5d90d03.ab8c03"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "649c6666.7184a8",
+        "type": "link in",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "links": [
+            "c2e3f299.40414"
+        ],
+        "x": 2015,
+        "y": 1120,
+        "wires": [
+            [
+                "9494af6f.c5c6e",
+                "246d4878.eeff28"
+            ]
+        ]
+    },
+    {
+        "id": "4b1def1a.7c31c",
+        "type": "InvertUltimate",
+        "z": "33898250.03adbe",
+        "name": "Invert",
+        "x": 730,
+        "y": 1360,
+        "wires": [
+            [
+                "c2e3f299.40414"
+            ]
+        ]
+    },
+    {
+        "id": "246d4878.eeff28",
+        "type": "BooleanLogicUltimate",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "filtertrue": "onlytrue",
+        "persist": true,
+        "sInitializeWith": "false",
+        "triggertopic": "trigger",
+        "outputtriggeredby": "all",
+        "inputCount": 2,
+        "topic": "result",
+        "x": 2010,
+        "y": 920,
+        "wires": [
+            [],
+            [],
+            [
+                "34cf72de.f24bce"
+            ]
+        ]
+    },
+    {
+        "id": "34cf72de.f24bce",
+        "type": "InvertUltimate",
+        "z": "4e67676c.de2018",
+        "name": "Invert",
+        "x": 2150,
+        "y": 980,
+        "wires": [
+            [
+                "5d90d03.ab8c03"
+            ]
+        ]
     }
 ]
