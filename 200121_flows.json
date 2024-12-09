@@ -77,6 +77,13 @@
         "info": ""
     },
     {
+        "id": "66299ce7.b7e1c4",
+        "type": "tab",
+        "label": "Batterie-Status",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "27e94ab1.a717e6",
         "type": "subflow",
         "name": "1 s clear",
@@ -8959,7 +8966,7 @@
         "type": "debug",
         "z": "f44878c2.dd3d58",
         "name": "bose exceptions",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -10996,9 +11003,14 @@
             },
             {
                 "index": 3,
-                "name": "Sonnenuntergang Dez 1",
-                "isValid": false,
-                "valid": {},
+                "name": "Sonnenuntergang Dez 1.1",
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": 60000,
+                    "validLevel": true,
+                    "validOperand1A": true,
+                    "validOperand1B": true
+                },
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -11010,8 +11022,8 @@
                 "timeMonths": "11",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
-                "timeDateStart": "2023-12-01",
-                "timeDateEnd": "2023-12-22",
+                "timeDateStart": "2024-12-01",
+                "timeDateEnd": "2024-12-22",
                 "timeMinValue": "21:30",
                 "timeMinType": "entered",
                 "offsetMinValue": "",
@@ -11029,8 +11041,8 @@
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "BestätigungAnwesenheit",
+                "validOperandAType": "global",
                 "validOperator": "true",
                 "validOperatorText": "is true",
                 "validOperandBValue": "",
@@ -11043,12 +11055,66 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
             },
             {
                 "index": 4,
+                "name": "Sonnenuntergang Dez 1.2",
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": true,
+                    "validLevel": true,
+                    "validOperand1A": true,
+                    "validOperand1B": true
+                },
+                "timeValue": "blueHourDuskStart",
+                "timeType": "pdsTime",
+                "timeOp": 1,
+                "timeOpText": "↧ from",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 3600000,
+                "timeDays": "*",
+                "timeMonths": "11",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "2024-12-01",
+                "timeDateEnd": "2024-12-22",
+                "timeMinValue": "",
+                "timeMinType": "none",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "",
+                "timeMaxType": "none",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "levelValue": "closed (min)",
+                "levelType": "levelFixed",
+                "levelOp": 0,
+                "levelOpText": "↕ absolute",
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "BestätigungAnwesenheit",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "is true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+            },
+            {
+                "index": 5,
                 "name": "Sonnenuntergang Dez 2",
                 "isValid": false,
                 "valid": {},
@@ -16157,7 +16223,7 @@
         "label": "set Motiondetection Terrasse",
         "tooltip": "set Motiondetection",
         "group": "d8ed037.4a1b3",
-        "order": 3,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -16226,7 +16292,7 @@
         "z": "33898250.03adbe",
         "d": true,
         "group": "d8ed037.4a1b3",
-        "order": 2,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -16747,7 +16813,7 @@
                 "name": "Sterne aus morgens",
                 "isValid": false,
                 "valid": {},
-                "timeValue": "7:45",
+                "timeValue": "8:00",
                 "timeType": "entered",
                 "timeOp": 1,
                 "timeOpText": "↧ from",
@@ -16793,7 +16859,7 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>7:45</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>8:00</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -16802,8 +16868,8 @@
                 "name": "Sterne ein",
                 "isValid": false,
                 "valid": {},
-                "timeValue": "blueHourDuskStart",
-                "timeType": "pdsTime",
+                "timeValue": "enableChristmasLights",
+                "timeType": "flow",
                 "timeOp": 1,
                 "timeOpText": "↧ from",
                 "offsetValue": "",
@@ -16848,17 +16914,21 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.enableChristmasLights</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
             {
                 "index": 3,
                 "name": "Sterne aus",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "21:30",
-                "timeType": "entered",
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": true,
+                    "validPayload": true,
+                    "validOperand1A": true
+                },
+                "timeValue": "disableChristmasLights",
+                "timeType": "flow",
                 "timeOp": 1,
                 "timeOpText": "↧ from",
                 "offsetValue": "",
@@ -16885,7 +16955,7 @@
                 "payloadOffsetValue": "",
                 "payloadOffsetType": "none",
                 "payloadOffsetMultiplier": 60000,
-                "payloadFormat": 99,
+                "payloadFormat": "",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
@@ -16903,9 +16973,7 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>21:30</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.disableChristmasLights</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>"
             }
         ],
         "payloadDefault": "",
@@ -16944,8 +17012,8 @@
         "label": "Status Weihnachtssterne",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1530,
-        "y": 1220,
+        "x": 1570,
+        "y": 1260,
         "wires": []
     },
     {
@@ -16968,8 +17036,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1050,
-        "y": 1220,
+        "x": 1070,
+        "y": 1260,
         "wires": [
             [
                 "6ef47f45.b604b"
@@ -17153,8 +17221,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1300,
-        "y": 1220,
+        "x": 1340,
+        "y": 1260,
         "wires": [
             [
                 "d57fc8ff.90ea68"
@@ -17293,7 +17361,7 @@
         "label": "Light Terrace manual",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 4,
+        "order": 7,
         "width": "6",
         "height": "1",
         "passthru": true,
@@ -17395,7 +17463,7 @@
         "label": "Time Light Terrace On [s]",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 5,
+        "order": 1,
         "width": 0,
         "height": 0,
         "wrap": false,
@@ -18511,8 +18579,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 480,
-        "y": 1560,
+        "x": 500,
+        "y": 1780,
         "wires": [
             [
                 "abfbc502.a97108"
@@ -18539,8 +18607,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 470,
-        "y": 1640,
+        "x": 490,
+        "y": 1860,
         "wires": [
             [
                 "227d665c.efa68a"
@@ -18567,8 +18635,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 470,
-        "y": 1720,
+        "x": 490,
+        "y": 1940,
         "wires": [
             [
                 "59f5c9a1.8c6698"
@@ -18605,8 +18673,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 1560,
+        "x": 740,
+        "y": 1780,
         "wires": [
             [
                 "c9829f64.4a97f"
@@ -18643,8 +18711,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 1640,
+        "x": 740,
+        "y": 1860,
         "wires": [
             [
                 "1cc49d1a.4a4303"
@@ -18681,8 +18749,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 1720,
+        "x": 740,
+        "y": 1940,
         "wires": [
             [
                 "9f683ba.57e03c8"
@@ -18706,8 +18774,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 980,
-        "y": 1560,
+        "x": 1000,
+        "y": 1780,
         "wires": []
     },
     {
@@ -18727,8 +18795,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 990,
-        "y": 1640,
+        "x": 1010,
+        "y": 1860,
         "wires": []
     },
     {
@@ -18748,8 +18816,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 970,
-        "y": 1720,
+        "x": 990,
+        "y": 1940,
         "wires": []
     },
     {
@@ -18758,74 +18826,6 @@
         "z": "33898250.03adbe",
         "name": "Light basement",
         "label": "Light basement",
-        "tooltip": "",
-        "group": "d8ed037.4a1b3",
-        "order": 6,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "className": "",
-        "x": 180,
-        "y": 1560,
-        "wires": [
-            [
-                "74ac1640.f64b38"
-            ]
-        ]
-    },
-    {
-        "id": "c8d275a5.aeb498",
-        "type": "ui_switch",
-        "z": "33898250.03adbe",
-        "name": "Light ground floor",
-        "label": "Light ground floor",
-        "tooltip": "",
-        "group": "d8ed037.4a1b3",
-        "order": 7,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "className": "",
-        "x": 190,
-        "y": 1640,
-        "wires": [
-            [
-                "376422a.e17a5de"
-            ]
-        ]
-    },
-    {
-        "id": "3f52ca33.6e2f76",
-        "type": "ui_switch",
-        "z": "33898250.03adbe",
-        "name": "Light hallway",
-        "label": "Light hallway",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
         "order": 8,
@@ -18846,8 +18846,76 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 170,
-        "y": 1720,
+        "x": 200,
+        "y": 1780,
+        "wires": [
+            [
+                "74ac1640.f64b38"
+            ]
+        ]
+    },
+    {
+        "id": "c8d275a5.aeb498",
+        "type": "ui_switch",
+        "z": "33898250.03adbe",
+        "name": "Light ground floor",
+        "label": "Light ground floor",
+        "tooltip": "",
+        "group": "d8ed037.4a1b3",
+        "order": 9,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 210,
+        "y": 1860,
+        "wires": [
+            [
+                "376422a.e17a5de"
+            ]
+        ]
+    },
+    {
+        "id": "3f52ca33.6e2f76",
+        "type": "ui_switch",
+        "z": "33898250.03adbe",
+        "name": "Light hallway",
+        "label": "Light hallway",
+        "tooltip": "",
+        "group": "d8ed037.4a1b3",
+        "order": 10,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 190,
+        "y": 1940,
         "wires": [
             [
                 "e4874526.d5cdf8"
@@ -18860,8 +18928,8 @@
         "z": "33898250.03adbe",
         "name": "Licht im Flur",
         "info": "",
-        "x": 150,
-        "y": 1480,
+        "x": 170,
+        "y": 1700,
         "wires": []
     },
     {
@@ -24639,7 +24707,7 @@
         "label": "set x-mas lights",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 1,
+        "order": 4,
         "width": "6",
         "height": "1",
         "passthru": true,
@@ -24711,45 +24779,12 @@
         "y": 1240,
         "wires": [
             [
-                "c9ee7bec.6cfc58"
+                "c9ee7bec.6cfc58",
+                "bef0d52e.719368"
             ],
             [],
             []
         ]
-    },
-    {
-        "id": "9fa5487.a0cb3b8",
-        "type": "debug",
-        "z": "33898250.03adbe",
-        "name": "check x-mas lights 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1440,
-        "y": 1320,
-        "wires": []
-    },
-    {
-        "id": "d4f34cdb.2a9cd",
-        "type": "debug",
-        "z": "33898250.03adbe",
-        "name": "check x-mas lights 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1440,
-        "y": 1360,
-        "wires": []
     },
     {
         "id": "c155aa03.11ffc8",
@@ -24860,6 +24895,265 @@
         "wires": [
             [
                 "5d90d03.ab8c03"
+            ]
+        ]
+    },
+    {
+        "id": "bef0d52e.719368",
+        "type": "ccu-value",
+        "z": "33898250.03adbe",
+        "name": "Schaltaktor Steckdose Terrasse",
+        "iface": "HmIP-RF",
+        "channel": "00316080001120:4 Schaltaktor Steckdose Terrasse",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 1090,
+        "y": 1200,
+        "wires": [
+            [
+                "640b1459.d5612c"
+            ]
+        ]
+    },
+    {
+        "id": "357cf0fc.5aeb3",
+        "type": "ui_text",
+        "z": "33898250.03adbe",
+        "group": "afd7242e.e4d3e8",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Status Weihnachtsbaum",
+        "label": "Status Weihnachtsbaum",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1570,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "640b1459.d5612c",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1340,
+        "y": 1200,
+        "wires": [
+            [
+                "357cf0fc.5aeb3"
+            ]
+        ]
+    },
+    {
+        "id": "52e6f8fa.10b4c8",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_WZ_Schiebe",
+        "iface": "HmIP-RF",
+        "channel": "0000DA499B2292:0 Fensterkontakt Schiebefenster WZ Süd:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "c3b3b97a.1480c8"
+            ]
+        ]
+    },
+    {
+        "id": "c3b3b97a.1480c8",
+        "type": "debug",
+        "z": "66299ce7.b7e1c4",
+        "name": "low bat schiebe",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ec811ef7.9c5b5",
+        "type": "inject",
+        "z": "66299ce7.b7e1c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "52e6f8fa.10b4c8"
+            ]
+        ]
+    },
+    {
+        "id": "5bd5536e.9f4d2c",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "enableChristmasLights",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enableChristmasLights",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32072fc1.2ce83",
+        "type": "ui_text_input",
+        "z": "33898250.03adbe",
+        "name": "enableChristmasLights",
+        "label": "x-mas lights ON",
+        "tooltip": "HH:MM",
+        "group": "d8ed037.4a1b3",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 200,
+        "y": 1500,
+        "wires": [
+            [
+                "5bd5536e.9f4d2c"
+            ]
+        ]
+    },
+    {
+        "id": "a90735e9.45fd18",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "disableChristmasLights",
+        "rules": [
+            {
+                "t": "set",
+                "p": "disableChristmasLights",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6002d8e2.6cebc8",
+        "type": "ui_text_input",
+        "z": "33898250.03adbe",
+        "name": "disableChristmasLights",
+        "label": "x-mas lights OFF",
+        "tooltip": "HH:MM",
+        "group": "d8ed037.4a1b3",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 210,
+        "y": 1560,
+        "wires": [
+            [
+                "a90735e9.45fd18"
             ]
         ]
     }
