@@ -11004,13 +11004,8 @@
             {
                 "index": 3,
                 "name": "Sonnenuntergang Dez 1.1",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -11055,18 +11050,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 4,
                 "name": "Sonnenuntergang Dez 1.2",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -11111,7 +11103,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 5,
@@ -24989,15 +24983,15 @@
         "id": "52e6f8fa.10b4c8",
         "type": "ccu-value",
         "z": "66299ce7.b7e1c4",
-        "name": "low_bat_WZ_Schiebe",
+        "name": "low_bat_Fenster_WZ_Schiebe",
         "iface": "HmIP-RF",
         "channel": "0000DA499B2292:0 Fensterkontakt Schiebefenster WZ Süd:0",
         "datapoint": "LOW_BAT",
         "mode": "",
         "start": true,
         "change": false,
-        "cache": false,
-        "queue": false,
+        "cache": true,
+        "queue": true,
         "on": 0,
         "onType": "undefined",
         "ramp": 0,
@@ -25005,11 +24999,12 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 400,
-        "y": 140,
+        "x": 330,
+        "y": 220,
         "wires": [
             [
-                "c3b3b97a.1480c8"
+                "c3b3b97a.1480c8",
+                "af4ef894.2f64c8"
             ]
         ]
     },
@@ -25026,34 +25021,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
+        "x": 580,
         "y": 140,
         "wires": []
-    },
-    {
-        "id": "ec811ef7.9c5b5",
-        "type": "inject",
-        "z": "66299ce7.b7e1c4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 140,
-        "wires": [
-            [
-                "52e6f8fa.10b4c8"
-            ]
-        ]
     },
     {
         "id": "5bd5536e.9f4d2c",
@@ -25154,6 +25124,1732 @@
         "wires": [
             [
                 "a90735e9.45fd18"
+            ]
+        ]
+    },
+    {
+        "id": "af4ef894.2f64c8",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie Schiebe-Fenster WZ bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "f7787617.475758"
+            ]
+        ]
+    },
+    {
+        "id": "f7787617.475758",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 220,
+        "wires": [
+            [
+                "2339baf6.faf6e6"
+            ]
+        ]
+    },
+    {
+        "id": "2339baf6.faf6e6",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a6a99c37.6804d",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Fenster_Kueche_Sued",
+        "iface": "HmIP-RF",
+        "channel": "0000DA499B218B:0 Fensterkontakt Küche Süd:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "56074727.2bb3f8"
+            ]
+        ]
+    },
+    {
+        "id": "56074727.2bb3f8",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie Fensterkontakt Küche Süd bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 300,
+        "wires": [
+            [
+                "c2815fa.01453a"
+            ]
+        ]
+    },
+    {
+        "id": "c2815fa.01453a",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 300,
+        "wires": [
+            [
+                "c9a4b6.cced4b48"
+            ]
+        ]
+    },
+    {
+        "id": "c9a4b6.cced4b48",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be05788f.39cdc8",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Fenster_WZ_Sued",
+        "iface": "HmIP-RF",
+        "channel": "0000DA499B225B:0 Fensterkontakt WZ Süd:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "b0d8e080.730b5"
+            ]
+        ]
+    },
+    {
+        "id": "b0d8e080.730b5",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie Fensterkontakt WZ Süd bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 380,
+        "wires": [
+            [
+                "fa4b4be9.335df8"
+            ]
+        ]
+    },
+    {
+        "id": "fa4b4be9.335df8",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 380,
+        "wires": [
+            [
+                "6d22464f.f66e58"
+            ]
+        ]
+    },
+    {
+        "id": "6d22464f.f66e58",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bcdb159.23a95e",
+        "type": "comment",
+        "z": "66299ce7.b7e1c4",
+        "name": "Fensterkontaktschalter",
+        "info": "",
+        "x": 300,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "27845c5b.ddae74",
+        "type": "comment",
+        "z": "66299ce7.b7e1c4",
+        "name": "Rauchmelder",
+        "info": "",
+        "x": 270,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "1557047c.83f9cc",
+        "type": "comment",
+        "z": "66299ce7.b7e1c4",
+        "name": "Wasserstandsmelder",
+        "info": "",
+        "x": 300,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "eec216eb.4acc28",
+        "type": "comment",
+        "z": "66299ce7.b7e1c4",
+        "name": "Lichtsensoren",
+        "info": "",
+        "x": 270,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "61cca19f.472d4",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Rauchmelder_Gäste",
+        "iface": "HmIP-RF",
+        "channel": "000A5D899B72EA:0 Rauchmelder_Gästezimmer:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "3a6a6724.412818"
+            ]
+        ]
+    },
+    {
+        "id": "3a6a6724.412818",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Rauchmelder Gästezimmer bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 620,
+        "wires": [
+            [
+                "467d0a3c.7145a4"
+            ]
+        ]
+    },
+    {
+        "id": "467d0a3c.7145a4",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 620,
+        "wires": [
+            [
+                "dd81ae4.90bba5"
+            ]
+        ]
+    },
+    {
+        "id": "dd81ae4.90bba5",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2b28e68.08e43",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Rauchmelder Wohnzimmer bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 700,
+        "wires": [
+            [
+                "f71f1a1e.ab5428"
+            ]
+        ]
+    },
+    {
+        "id": "f71f1a1e.ab5428",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 700,
+        "wires": [
+            [
+                "8cb64392.ab33c"
+            ]
+        ]
+    },
+    {
+        "id": "8cb64392.ab33c",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f70fe6a.63c32",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Rauchmelder_WZ",
+        "iface": "HmIP-RF",
+        "channel": "000A5D899B72E3:0 Rauchmelder_WZ:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 320,
+        "y": 700,
+        "wires": [
+            [
+                "b2b28e68.08e43"
+            ]
+        ]
+    },
+    {
+        "id": "dce5a89f.99a318",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Rauchmelder Flur OG bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 780,
+        "wires": [
+            [
+                "efc42227.ee6ac"
+            ]
+        ]
+    },
+    {
+        "id": "efc42227.ee6ac",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 780,
+        "wires": [
+            [
+                "625f80a3.99c7e"
+            ]
+        ]
+    },
+    {
+        "id": "625f80a3.99c7e",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c43b8493.7c85f8",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Rauchmelder_Flur_OG",
+        "iface": "HmIP-RF",
+        "channel": "000A5D899B6E2E:0 Rauchmelder Flur OG:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "dce5a89f.99a318"
+            ]
+        ]
+    },
+    {
+        "id": "729dc172.a315f",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Rauchmelder Schlafzimmer bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 860,
+        "wires": [
+            [
+                "4516a97d.526558"
+            ]
+        ]
+    },
+    {
+        "id": "4516a97d.526558",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 860,
+        "wires": [
+            [
+                "eef377b3.011558"
+            ]
+        ]
+    },
+    {
+        "id": "eef377b3.011558",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86191e5c.73119",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Rauchmelder_Schlafen",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2019065:0 Rauchmelder Schlafzimmer:0",
+        "datapoint": "LOWBAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 330,
+        "y": 860,
+        "wires": [
+            [
+                "729dc172.a315f"
+            ]
+        ]
+    },
+    {
+        "id": "c1c783d2.f3c3c",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Rauchmelder in Konstantins Zimmer bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 940,
+        "wires": [
+            [
+                "757097f5.955008"
+            ]
+        ]
+    },
+    {
+        "id": "757097f5.955008",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 940,
+        "wires": [
+            [
+                "291ca13c.2ec20e"
+            ]
+        ]
+    },
+    {
+        "id": "291ca13c.2ec20e",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2857f5d.e049d",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Rauchmelder_Konstantin",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2019061:0 Rauchmelder Konstantin:0",
+        "datapoint": "LOWBAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 340,
+        "y": 940,
+        "wires": [
+            [
+                "c1c783d2.f3c3c"
+            ]
+        ]
+    },
+    {
+        "id": "7413aa41.6560f4",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Rauchmelder in Frederiks Zimmer bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1020,
+        "wires": [
+            [
+                "97991aa.cc23de8"
+            ]
+        ]
+    },
+    {
+        "id": "97991aa.cc23de8",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 1020,
+        "wires": [
+            [
+                "75e29411.9b3ffc"
+            ]
+        ]
+    },
+    {
+        "id": "75e29411.9b3ffc",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36430c96.7a2be4",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Rauchmelder_Frederik",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2019168:0 Rauchmelder Frederik:0",
+        "datapoint": "LOWBAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 330,
+        "y": 1020,
+        "wires": [
+            [
+                "7413aa41.6560f4"
+            ]
+        ]
+    },
+    {
+        "id": "712cb3c1.0f908c",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Wassersensor im HWR bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1220,
+        "wires": [
+            [
+                "60e0b950.b82188"
+            ]
+        ]
+    },
+    {
+        "id": "60e0b950.b82188",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 1220,
+        "wires": [
+            [
+                "a4f7916a.d22e7"
+            ]
+        ]
+    },
+    {
+        "id": "a4f7916a.d22e7",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d255ec2c.b2f67",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Wasser_HWR",
+        "iface": "HmIP-RF",
+        "channel": "00189A4995CE9D:0 Wassersensor Waschraum:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 310,
+        "y": 1220,
+        "wires": [
+            [
+                "712cb3c1.0f908c"
+            ]
+        ]
+    },
+    {
+        "id": "72489010.1df17",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Wassersensor im Fitnessraum bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1300,
+        "wires": [
+            [
+                "c548b377.bfdfa"
+            ]
+        ]
+    },
+    {
+        "id": "c548b377.bfdfa",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 1300,
+        "wires": [
+            [
+                "5cd1d5d8.46885c"
+            ]
+        ]
+    },
+    {
+        "id": "5cd1d5d8.46885c",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "11303712.410a99",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Wasser_Fitnessraum",
+        "iface": "HmIP-RF",
+        "channel": "00189A4995CEA4:0 Wassersensor HAR:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 330,
+        "y": 1300,
+        "wires": [
+            [
+                "72489010.1df17"
+            ]
+        ]
+    },
+    {
+        "id": "b0d4cbf.a24f438",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Lichtsensor Hauswand Ost bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1520,
+        "wires": [
+            [
+                "ddd3bcd.a2f3f4"
+            ]
+        ]
+    },
+    {
+        "id": "ddd3bcd.a2f3f4",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 1520,
+        "wires": [
+            [
+                "f70393e3.b0cc6"
+            ]
+        ]
+    },
+    {
+        "id": "f70393e3.b0cc6",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c7d370d.cb47a8",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Licht_Ost",
+        "iface": "HmIP-RF",
+        "channel": "000D5D89B154E7:0 Lichtsensor 2 Garten:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 290,
+        "y": 1520,
+        "wires": [
+            [
+                "b0d4cbf.a24f438"
+            ]
+        ]
+    },
+    {
+        "id": "98c0d342.25f32",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Lichtsensor Hauswand West bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1600,
+        "wires": [
+            [
+                "d168d79d.3f68a8"
+            ]
+        ]
+    },
+    {
+        "id": "d168d79d.3f68a8",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 1600,
+        "wires": [
+            [
+                "2dad44c8.dd1c9c"
+            ]
+        ]
+    },
+    {
+        "id": "2dad44c8.dd1c9c",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a77786b7.bd5f88",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Licht_West",
+        "iface": "HmIP-RF",
+        "channel": "000D5D89B156DE:0 Lichtsensor Garten:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 300,
+        "y": 1600,
+        "wires": [
+            [
+                "98c0d342.25f32"
+            ]
+        ]
+    },
+    {
+        "id": "6ecd3bb8.5a0d54",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Lichtsensor Hauswand Süd bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1680,
+        "wires": [
+            [
+                "987d3729.f60dc8"
+            ]
+        ]
+    },
+    {
+        "id": "987d3729.f60dc8",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 1680,
+        "wires": [
+            [
+                "1cb8c1d4.f4b39e"
+            ]
+        ]
+    },
+    {
+        "id": "1cb8c1d4.f4b39e",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10af90c.9d9026f",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Licht_Süd",
+        "iface": "HmIP-RF",
+        "channel": "000D5D89B9EDA3:0 Lichtsensor 3 Garten:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 290,
+        "y": 1680,
+        "wires": [
+            [
+                "6ecd3bb8.5a0d54"
+            ]
+        ]
+    },
+    {
+        "id": "33bdeacd.1ae336",
+        "type": "comment",
+        "z": "66299ce7.b7e1c4",
+        "name": "Strommesser",
+        "info": "",
+        "x": 270,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "9edc4d8d.5a313",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Strommesser am Zähler bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1900,
+        "wires": [
+            [
+                "48955bcc.a0bed4"
+            ]
+        ]
+    },
+    {
+        "id": "48955bcc.a0bed4",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 1900,
+        "wires": [
+            [
+                "8fd266b3.a66518"
+            ]
+        ]
+    },
+    {
+        "id": "8fd266b3.a66518",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 1900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ff0ddd2.3f1572",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Strom",
+        "iface": "HmIP-RF",
+        "channel": "003FA0C9AD7613:0 HmIP-ESI Strommesser:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 280,
+        "y": 1900,
+        "wires": [
+            [
+                "9edc4d8d.5a313"
+            ]
+        ]
+    },
+    {
+        "id": "246d86a8.d650ca",
+        "type": "comment",
+        "z": "66299ce7.b7e1c4",
+        "name": "Funktaster",
+        "info": "",
+        "x": 260,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "57903d4d.b1d064",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Funktaster Garage bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 2120,
+        "wires": [
+            [
+                "2323aaa2.992d96"
+            ]
+        ]
+    },
+    {
+        "id": "2323aaa2.992d96",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 2120,
+        "wires": [
+            [
+                "cd44ef74.2140a"
+            ]
+        ]
+    },
+    {
+        "id": "cd44ef74.2140a",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 2120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1453f1f5.55324e",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Taster_Garage",
+        "iface": "HmIP-RF",
+        "channel": "00316080001120:0 Doppelschalter Terrasse:0",
+        "datapoint": "ERROR_POWER_FAILURE",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 310,
+        "y": 2120,
+        "wires": [
+            [
+                "a6c02b5a.8a9ca8",
+                "57903d4d.b1d064"
+            ]
+        ]
+    },
+    {
+        "id": "a6c02b5a.8a9ca8",
+        "type": "debug",
+        "z": "66299ce7.b7e1c4",
+        "name": "Voltage Garage",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "a4e6e8de.8c1198",
+        "type": "comment",
+        "z": "66299ce7.b7e1c4",
+        "name": "Bewegungsmelder",
+        "info": "",
+        "x": 290,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "5fb09009.f053e",
+        "type": "change",
+        "z": "66299ce7.b7e1c4",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"Batteriestatus\",\"body\":\"Batterie vom Bewegungsmelder Terrasse bitte ersetzen!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 2340,
+        "wires": [
+            [
+                "32933f1.fb43fc"
+            ]
+        ]
+    },
+    {
+        "id": "32933f1.fb43fc",
+        "type": "switch",
+        "z": "66299ce7.b7e1c4",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 2340,
+        "wires": [
+            [
+                "5c0f7201.d1efec"
+            ]
+        ]
+    },
+    {
+        "id": "5c0f7201.d1efec",
+        "type": "remote-notification",
+        "z": "66299ce7.b7e1c4",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 990,
+        "y": 2340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ed61464.721e0c",
+        "type": "ccu-value",
+        "z": "66299ce7.b7e1c4",
+        "name": "low_bat_Bewegung_Terrasse",
+        "iface": "HmIP-RF",
+        "channel": "00321F29971B60:0 Bewegungsmelder Terrasse:0",
+        "datapoint": "LOW_BAT",
+        "mode": "",
+        "start": true,
+        "change": false,
+        "cache": true,
+        "queue": true,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 330,
+        "y": 2340,
+        "wires": [
+            [
+                "5fb09009.f053e"
             ]
         ]
     }
